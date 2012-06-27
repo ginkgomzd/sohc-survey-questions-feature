@@ -1,15 +1,15 @@
 #!/bin/bash
 
-DB_DUMP_LIST_PROD='sohc_drupal:sohc_drupal'; #space-seprated list
+DB_DUMP_LIST_PROD='sohc_feature_dev:sohc_feature_dev'; #space-seprated list
 DB_DUMP_LIST_DEV=$DB_DUMP_LIST_PROD; #space-seprated list
 DB_DUMP_LIST_STAGING=$DB_DUMP_LIST_PROD; #space-seprated list
 
 SITE_URI='sohc'; # used for drush -l <URL>
 CONFIG_TRUNCATE_TABLES="@/search* @/cache* @/watchdog.sql @/sessions.sql"
 
-DUMP_PATH_DEV='/var/www/sohc.localhost/gsl.dev/dbdumps'
+DUMP_PATH_DEV='/var/www/sohc-feature-dev.ginkgostreet.com/gsl.dev/dbdumps'
 DUMP_PATH_PROD=$DUMP_PATH_DEV
-DUMP_PATH_STAGING='/var/www/sohc.ginkgostreet.com/gsl.dev/dbdumps'
+DUMP_PATH_STAGING=$DUMP_PATH_DEV
 
 DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
