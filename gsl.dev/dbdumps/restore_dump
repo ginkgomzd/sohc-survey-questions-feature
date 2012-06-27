@@ -1,0 +1,87 @@
+#!/bin/bash
+###
+# Argument is dir of sql scripts
+# default behavior is to fully ignore tables in the Truncate list.
+# Truncate list can contain file-globbing patters;
+###
+
+dumps_path=''
+TRUNCATE=false
+FULL_RESTORE=false
+database_name=''
+
+help_msg() 
+{
+	cat <<EOM
+USAGE: restore_dump -[tf] -p <path> -d <name>
+	-t Restore tables in the Truncate list with no rows
+	-f Full Restore
+	-p <path> Location of the dump scripts defaults to a dir of the same name as the database in the current dir
+	-d <name> REQUIRED Database Name.
+	-x <list> REQUIRED, except with -f. A whitespace-delimited list of tables for exclusion or truncation.
+	  Behavior depends on the -t Truncate flag. Without truncate, these tables are ignored (not restored).
+	  May contain file names or shell file-globbing patters. Each item must be preceded with an @/.
+	  e.g. -x "@/cache* @/watchdog.sql"
+EOM
+}
+
+while getopts "tfp:d:x:" opt; do
+  case $opt in
+    t) TRUNCATE=true;           ;;
+    f) FULL_RESTORE=true;       ;;      #No Tables will be Truncated
+    p) dumps_path="$OPTARG";    ;;
+    d) database_name="$OPTARG"; ;;
+    x) exclude_list="$OPTARG";  ;;
+    ?) help_msg;              ;;
+  esac
+done
+
+if [ $# -lt 1 ] ; then help_msg; fi
+
+if [ "$database_name" == '' ]; then echo "ERROR must provide a database name with -d <database name>"; exit; fi
+
+if [[ ! $FULL_RESTORE ]] && [[ "$exclude_list" == '' ]]; then echo "ERROR must provide a file exclude/truncate list."; exit; fi
+
+if [ "$dumps_path" == '' ]; then  dumps_path=${PWD}/$database_name; fi
+dumps_path=${dumps_path%/}	#remove trailing slash
+
+CONFIG_TRUNCATE_TABLES=`echo $exclude_list | sed 's/\@/'$dumps_path'/g'`
+
+ex_files=`echo $CONFIG_TRUNCATE_TABLES` #string-ify file-globs
+ex_files=${ex_files//\*/} #remove invalid asterisks
+
+for f in $ex_files; do
+  if [ ! -f $f ]; then echo "WARNING: $f doesn't exist."; fi
+  if [[ -f $f ]] && [[ ! $FULL_RESTORE ]]; then
+    if $TRUNCATE ; then 
+      cat $f | egrep -v "^INSERT|^LOCK|^UNLOCK" > $f.tmp
+    fi
+    # hide files
+    mv $f `echo $f | sed 's/\//\/\.hid/'`
+  fi
+done
+
+if [ $FULL_RESTORE == true ]; then
+	echo "FULL RESTORE: Droping Database $database_name"
+	echo "drop database $database_name; create database $database_name;" | mysql
+fi
+
+for f in $dumps_path/* ; do
+  echo "forking "$f
+  sh -c "cat $f | mysql $database_name" &
+done
+
+#now wait for jobs to finish
+wait
+#for job in `jobs -p`
+#do
+#    wait $job 
+#done
+
+#now cleanup temp files
+for f in $ex_files; do
+  rm $f.tmp 2>/dev/null
+  fn=`echo $f | sed 's/\//\/\.hid/'`
+  if [ -f $fn ]; then mv $fn `echo $fn | sed 's/\/.hid/\//'`; fi
+done
+

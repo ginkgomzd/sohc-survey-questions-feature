@@ -1,0 +1,88 @@
+#!/bin/bash
+
+        site_uri=''
+        cache_type='all'
+        run_drush=false
+
+help_msg() {
+
+	cat <<EOM
+REQUIRED ARGUMENTS:
+	-p Dir to create database dumps in. Each Database will get a dir within this folder
+	-l Database Name List. A white-space delimited list of both dir and database names.
+	   e.g. - "my_dir:my_database my_dir2:my_database2"
+		
+OPTIONAL:
+	-d run drush with clear-cache-type, 'all'
+	-u Required with -d or -c. Site URI, will be passed to drush --url
+	-c Drush cache-type, defaults to 'all'. Implies -d.
+EOM
+
+}
+
+        while getopts "du:c:p:l:" opt; do
+                case $opt in
+                d) run_drush=true;              ;;
+                u) site_uri="$OPTARG";          ;;
+                c) cache_type="$OPTARG";
+                   run_drush=true;              ;;
+		p) dump_path="$OPTARG";		;;
+		l) db_dump_list="$OPTARG";	;;
+		?) help_msg;			;;
+                esac
+        done
+
+
+
+mysql_table_dump() {
+	mysqldump --skip-extended-insert --order-by-primary --skip-comments --skip-dump-date $@
+}
+
+save_table_dump()
+{
+        db_name=$1; table_name=$2; db_dump_path=${3%/};
+        mysql_table_dump $db_name $table_name > $db_dump_path/$table_name.sql;
+}
+
+save_database_dumps() 
+{
+        db_name=$1;
+        db_dump_path=${dump_path%/}/$2;
+        umask u=rwx,g=rwx,o=;
+
+        cd $dump_path
+
+        if [ -f $db_name.list ]
+        then
+                rm $db_name.list;
+        fi
+
+        echo "SHOW TABLES IN $db_name;" | mysql | grep -v "Tables" > $db_name.list;
+
+        if [ ! -d $db_dump_path ]
+        then
+                mkdir $db_dump_path;
+                chmod g+w $db_dump_path;
+        fi
+
+        for f in `cat ${db_name}.list`; do
+                # do the dump: capturing error and filtering expected error due to my.cnf usage
+                save_table_dump $db_name $f $db_dump_path 2>&1 | grep -v "ignoring option '--databases" 1>&2;
+        done
+}
+
+
+### DO DUMP:
+        if $run_drush ; then
+                #empty cache tables;
+                drush -l $site_uri cc $cache_type;
+        fi
+
+        cd $dump_path
+
+        for conf in $db_dump_list; do
+		db_path=`echo $conf | awk -v FS=':' '{ print $1 }'`
+                db_name=`echo $conf | awk -v FS=':' '{ print $2 }'`
+                save_database_dumps $db_name $db_path
+        done
+

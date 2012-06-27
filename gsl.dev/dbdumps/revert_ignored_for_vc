@@ -1,0 +1,5 @@
+git checkout -- $1/cache*
+git checkout -- $1/search*
+git checkout -- $1/watchdog.sql
+git checkout -- $1/sessions.sql
+

@@ -1,0 +1,84 @@
+#!/bin/bash
+
+DB_DUMP_LIST_PROD='sohc_drupal:sohc_drupal'; #space-seprated list
+DB_DUMP_LIST_DEV=$DB_DUMP_LIST_PROD; #space-seprated list
+DB_DUMP_LIST_STAGING=$DB_DUMP_LIST_PROD; #space-seprated list
+
+SITE_URI='sohc'; # used for drush -l <URL>
+CONFIG_TRUNCATE_TABLES="@/search* @/cache* @/watchdog.sql @/sessions.sql"
+
+DUMP_PATH_DEV='/var/www/sohc.localhost/gsl.dev/dbdumps'
+DUMP_PATH_PROD=$DUMP_PATH_DEV
+DUMP_PATH_STAGING='/var/www/sohc.ginkgostreet.com/gsl.dev/dbdumps'
+
+DIR="$( cd -P "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+sohc_dump_dbs() {
+	$DIR/dump_dbs -p $DUMP_PATH_DEV -l "$DB_DUMP_LIST_DEV" $@
+
+	pushd .
+	cd $DUMP_PATH_DEV
+
+	for conf in $DB_DUMP_LIST_DEV; do
+                dump_path=`echo $conf | awk -v FS=':' '{ print $1 }'`
+		for f in `echo $CONFIG_TRUNCATE_TABLES | sed 's/\@/'$dumps_path'/g'`; do
+			# revert truncate-tables
+			git checkout -- $dump_path/$f
+		done
+	done
+
+	popd
+}
+
+sohc_dump_dbs_staging() {
+	$DIR/dump_dbs -p $DUMP_PATH_STAGING -l "$DB_DUMP_LIST_STAGING"  $@
+}
+
+sohc_dump_dbs_prod() {
+	$DIR/dump_dbs -p $DUMP_PATH_PROD -l "$DBDUMP_LIST_PROD" $@
+}
+
+sohc_dump_dbs_cc() {
+	sohc_dump_dbs -d -u $SITE_URI
+}
+
+sohc_dump_dbs_cc_prod() {
+	sohc_dump_dbs_prod -d -u $SITE_URI
+}
+
+restore_dbs() {
+	DUMP_PATH=${1%/}; DB_DUMP_LIST=$2
+
+	pushd .
+	cd $DUMP_PATH
+
+	echo $DB_DUMP_LIST
+	for conf in $DB_DUMP_LIST; do
+		dump_path=`echo $conf | awk -v FS=':' '{ print $1 }'`
+		db=`echo $conf | awk -v FS=':' '{ print $2 }'`
+		$DIR/restore_dump -d "$db" -p "$dump_path" -x "$CONFIG_TRUNCATE_TABLES" #-f
+	done
+
+	popd
+}
+
+restore_dbs_run_cron() {
+	restore_dbs
+	
+        if [ $SITE_URI != '' ]; then
+          echo "running drush --uri=$SITE_URI cron" 
+          drush -l $SITE_URI cron
+        fi
+}
+
+sohc_restore_dbs() {
+	restore_dbs "$DUMP_PATH_DEV" "$DB_DUMP_LIST_DEV"
+}
+
+sohc_restore_dbs_prod() {
+	restore_dbs "$DUMP_PATH_PROD" "$DB_DUMP_LIST_PROD"
+}
+
+sohc_restore_dbs_staging() {
+	restore_dbs "$DUMP_PATH_STAGING" "$DB_DUMP_LIST_STAGING"
+}
