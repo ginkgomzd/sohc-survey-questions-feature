@@ -43,7 +43,7 @@ CREATE TABLE `menu_links` (
   KEY `menu_plid_expand_child` (`menu_name`,`plid`,`expanded`,`has_children`),
   KEY `menu_parents` (`menu_name`,`p1`,`p2`,`p3`,`p4`,`p5`,`p6`,`p7`,`p8`,`p9`),
   KEY `router_path` (`router_path`(128))
-) ENGINE=InnoDB AUTO_INCREMENT=298 DEFAULT CHARSET=utf8 COMMENT='Contains the individual links within a menu.';
+) ENGINE=InnoDB AUTO_INCREMENT=332 DEFAULT CHARSET=utf8 COMMENT='Contains the individual links within a menu.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 LOCK TABLES `menu_links` WRITE;
@@ -307,6 +307,40 @@ INSERT INTO `menu_links` VALUES ('management',294,289,'admin/structure/types/man
 INSERT INTO `menu_links` VALUES ('management',295,289,'admin/structure/types/manage/%/comment/fields/%/edit','admin/structure/types/manage/%/comment/fields/%/edit','Edit','a:0:{}','system',-1,0,0,0,0,7,0,1,21,36,135,174,289,295,0,0,0);
 INSERT INTO `menu_links` VALUES ('management',296,289,'admin/structure/types/manage/%/comment/fields/%/field-settings','admin/structure/types/manage/%/comment/fields/%/field-settings','Field settings','a:0:{}','system',-1,0,0,0,0,7,0,1,21,36,135,174,289,296,0,0,0);
 INSERT INTO `menu_links` VALUES ('management',297,289,'admin/structure/types/manage/%/comment/fields/%/widget-type','admin/structure/types/manage/%/comment/fields/%/widget-type','Widget type','a:0:{}','system',-1,0,0,0,0,7,0,1,21,36,135,174,289,297,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',298,0,'field-collection/field-regional-coalition-coll/%','field-collection/field-regional-coalition-coll/%','','a:0:{}','system',0,0,0,0,0,1,0,298,0,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',299,0,'field-collection/field-contacts/%','field-collection/field-contacts/%','','a:0:{}','system',0,0,0,0,0,1,0,299,0,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',300,0,'field-collection/field-funding-other-sources/%','field-collection/field-funding-other-sources/%','','a:0:{}','system',0,0,0,0,0,1,0,300,0,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',301,6,'node/add/coalition-profile','node/add/coalition-profile','Coalition Profile','a:1:{s:10:\"attributes\";a:1:{s:5:\"title\";s:26:\"Coalition Survey Questions\";}}','system',0,0,0,0,0,2,0,6,301,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',302,21,'admin/structure/features','admin/structure/features','Features','a:1:{s:10:\"attributes\";a:1:{s:5:\"title\";s:16:\"Manage features.\";}}','system',0,0,0,0,0,3,0,1,21,302,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',303,21,'admin/structure/field-collections','admin/structure/field-collections','Field collections','a:1:{s:10:\"attributes\";a:1:{s:5:\"title\";s:35:\"Manage fields on field collections.\";}}','system',0,0,1,0,0,3,0,1,21,303,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',304,12,'admin/help/features','admin/help/features','features','a:0:{}','system',-1,0,0,0,0,3,0,1,12,304,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',305,12,'admin/help/field_collection','admin/help/field_collection','field_collection','a:0:{}','system',-1,0,0,0,0,3,0,1,12,305,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',306,299,'field-collection/field-contacts/%/delete','field-collection/field-contacts/%/delete','Delete','a:0:{}','system',-1,0,0,0,0,2,0,299,306,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',307,300,'field-collection/field-funding-other-sources/%/delete','field-collection/field-funding-other-sources/%/delete','Delete','a:0:{}','system',-1,0,0,0,0,2,0,300,307,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',308,298,'field-collection/field-regional-coalition-coll/%/delete','field-collection/field-regional-coalition-coll/%/delete','Delete','a:0:{}','system',-1,0,0,0,0,2,0,298,308,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',309,299,'field-collection/field-contacts/%/edit','field-collection/field-contacts/%/edit','Edit','a:0:{}','system',-1,0,0,0,0,2,0,299,309,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',310,300,'field-collection/field-funding-other-sources/%/edit','field-collection/field-funding-other-sources/%/edit','Edit','a:0:{}','system',-1,0,0,0,0,2,0,300,310,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',311,298,'field-collection/field-regional-coalition-coll/%/edit','field-collection/field-regional-coalition-coll/%/edit','Edit','a:0:{}','system',-1,0,0,0,0,2,0,298,311,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',312,299,'field-collection/field-contacts/%/view','field-collection/field-contacts/%/view','View','a:0:{}','system',-1,0,0,0,-10,2,0,299,312,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',313,300,'field-collection/field-funding-other-sources/%/view','field-collection/field-funding-other-sources/%/view','View','a:0:{}','system',-1,0,0,0,-10,2,0,300,313,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',314,298,'field-collection/field-regional-coalition-coll/%/view','field-collection/field-regional-coalition-coll/%/view','View','a:0:{}','system',-1,0,0,0,-10,2,0,298,314,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',315,302,'admin/structure/features/create','admin/structure/features/create','Create feature','a:1:{s:10:\"attributes\";a:1:{s:5:\"title\";s:21:\"Create a new feature.\";}}','system',-1,0,0,0,10,4,0,1,21,302,315,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',316,302,'admin/structure/features/manage','admin/structure/features/manage','Manage','a:1:{s:10:\"attributes\";a:1:{s:5:\"title\";s:28:\"Enable and disable features.\";}}','system',-1,0,0,0,0,4,0,1,21,302,316,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',317,303,'admin/structure/field-collections/%','admin/structure/field-collections/%','Manage fields','a:0:{}','system',0,0,0,0,1,4,0,1,21,303,317,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',318,0,'field-collection/field-contacts/add/%/%','field-collection/field-contacts/add/%/%','','a:0:{}','system',0,0,0,0,0,1,0,318,0,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',319,0,'field-collection/field-funding-other-sources/add/%/%','field-collection/field-funding-other-sources/add/%/%','','a:0:{}','system',0,0,0,0,0,1,0,319,0,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('navigation',320,0,'field-collection/field-regional-coalition-coll/add/%/%','field-collection/field-regional-coalition-coll/add/%/%','','a:0:{}','system',0,0,0,0,0,1,0,320,0,0,0,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',321,317,'admin/structure/field-collections/%/display','admin/structure/field-collections/%/display','Manage display','a:0:{}','system',-1,0,0,0,2,5,0,1,21,303,317,321,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',322,317,'admin/structure/field-collections/%/fields','admin/structure/field-collections/%/fields','Manage fields','a:0:{}','system',-1,0,1,0,1,5,0,1,21,303,317,322,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',323,302,'admin/structure/features/%/view','admin/structure/features/%/view','View','a:1:{s:10:\"attributes\";a:1:{s:5:\"title\";s:32:\"Display components of a feature.\";}}','system',-1,0,0,0,-10,4,0,1,21,302,323,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',324,302,'admin/structure/features/%/recreate','admin/structure/features/%/recreate','Recreate','a:1:{s:10:\"attributes\";a:1:{s:5:\"title\";s:29:\"Recreate an existing feature.\";}}','system',-1,0,0,0,11,4,0,1,21,302,324,0,0,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',325,321,'admin/structure/field-collections/%/display/default','admin/structure/field-collections/%/display/default','Default','a:0:{}','system',-1,0,0,0,-10,6,0,1,21,303,317,321,325,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',326,321,'admin/structure/field-collections/%/display/full','admin/structure/field-collections/%/display/full','Full content','a:0:{}','system',-1,0,0,0,0,6,0,1,21,303,317,321,326,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',327,322,'admin/structure/field-collections/%/fields/%','admin/structure/field-collections/%/fields/%','','a:0:{}','system',0,0,0,0,0,6,0,1,21,303,317,322,327,0,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',328,327,'admin/structure/field-collections/%/fields/%/delete','admin/structure/field-collections/%/fields/%/delete','Delete','a:0:{}','system',-1,0,0,0,10,7,0,1,21,303,317,322,327,328,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',329,327,'admin/structure/field-collections/%/fields/%/edit','admin/structure/field-collections/%/fields/%/edit','Edit','a:0:{}','system',-1,0,0,0,0,7,0,1,21,303,317,322,327,329,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',330,327,'admin/structure/field-collections/%/fields/%/field-settings','admin/structure/field-collections/%/fields/%/field-settings','Field settings','a:0:{}','system',-1,0,0,0,0,7,0,1,21,303,317,322,327,330,0,0,0);
+INSERT INTO `menu_links` VALUES ('management',331,327,'admin/structure/field-collections/%/fields/%/widget-type','admin/structure/field-collections/%/fields/%/widget-type','Widget type','a:0:{}','system',-1,0,0,0,0,7,0,1,21,303,317,322,327,331,0,0,0);
 /*!40000 ALTER TABLE `menu_links` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;

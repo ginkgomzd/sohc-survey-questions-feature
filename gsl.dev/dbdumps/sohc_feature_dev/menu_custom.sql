@@ -22,6 +22,7 @@ CREATE TABLE `menu_custom` (
 
 LOCK TABLES `menu_custom` WRITE;
 /*!40000 ALTER TABLE `menu_custom` DISABLE KEYS */;
+INSERT INTO `menu_custom` VALUES ('features','Features','Menu items for any enabled features.');
 INSERT INTO `menu_custom` VALUES ('main-menu','Main menu','The <em>Main</em> menu is used on many sites to show the major sections of the site, often in a top navigation bar.');
 INSERT INTO `menu_custom` VALUES ('management','Management','The <em>Management</em> menu contains links for administrative tasks.');
 INSERT INTO `menu_custom` VALUES ('navigation','Navigation','The <em>Navigation</em> menu contains links intended for site visitors. Links are added to the <em>Navigation</em> menu automatically by some modules.');

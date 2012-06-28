@@ -33,6 +33,7 @@ CREATE TABLE `node_type` (
 LOCK TABLES `node_type` WRITE;
 /*!40000 ALTER TABLE `node_type` DISABLE KEYS */;
 INSERT INTO `node_type` VALUES ('article','Article','node_content','node','Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.','',1,'Title',1,1,0,0,'article');
+INSERT INTO `node_type` VALUES ('coalition_profile','Coalition Profile','node_content','survey_questions','Coalition Survey Questions','',1,'Coalition Name',0,0,1,0,'coalition_profile');
 INSERT INTO `node_type` VALUES ('page','Basic page','node_content','node','Use <em>basic pages</em> for your static content, such as an \'About us\' page.','',1,'Title',1,1,0,0,'page');
 /*!40000 ALTER TABLE `node_type` ENABLE KEYS */;
 UNLOCK TABLES;
