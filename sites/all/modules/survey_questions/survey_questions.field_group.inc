@@ -439,11 +439,10 @@ function survey_questions_field_group_info() {
     'children' => array(
       0 => 'field_strategic_plan_length',
       1 => 'field_strategic_plan_links',
-      2 => 'field_strategic_plan_external',
-      3 => 'field_oral_health_plan',
-      4 => 'field_oral_health_links',
-      5 => 'field_oral_health_driver',
-      6 => 'field_priorities_hp_2020',
+      2 => 'field_oral_health_plan',
+      3 => 'field_oral_health_links',
+      4 => 'field_oral_health_driver',
+      5 => 'field_priorities_hp_2020',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -471,11 +470,10 @@ function survey_questions_field_group_info() {
     'children' => array(
       0 => 'field_strategic_plan_length',
       1 => 'field_strategic_plan_links',
-      2 => 'field_strategic_plan_external',
-      3 => 'field_oral_health_plan',
-      4 => 'field_oral_health_links',
-      5 => 'field_oral_health_driver',
-      6 => 'field_priorities_hp_2020',
+      2 => 'field_oral_health_plan',
+      3 => 'field_oral_health_links',
+      4 => 'field_oral_health_driver',
+      5 => 'field_priorities_hp_2020',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

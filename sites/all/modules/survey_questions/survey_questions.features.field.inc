@@ -4309,69 +4309,6 @@ v|Medical/Dental Collaboration',
     ),
   );
 
-  // Exported field: 'node-coalition_profile-field_strategic_plan_external'.
-  $fields['node-coalition_profile-field_strategic_plan_external'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_strategic_plan_external',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => 'N',
-          1 => 'Y',
-        ),
-        'allowed_values_function' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'list_boolean',
-    ),
-    'field_instance' => array(
-      'bundle' => 'coalition_profile',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'list',
-          'settings' => array(),
-          'type' => 'list_default',
-          'weight' => '17',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_strategic_plan_external',
-      'label' => 'Are external stakeholders involved in the planning process?',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_buttons',
-        'weight' => '36',
-      ),
-    ),
-  );
-
   // Exported field: 'node-coalition_profile-field_strategic_plan_length'.
   $fields['node-coalition_profile-field_strategic_plan_length'] = array(
     'field_config' => array(
@@ -4964,7 +4901,6 @@ v|Medical/Dental Collaboration',
   t('(check all that apply)');
   t('Add as many orgs as you collaborate with.');
   t('Are any of your current priorities directly related to Health People 2020 goals?');
-  t('Are external stakeholders involved in the planning process?');
   t('Are your Charter/Constitution/Other Formal Rules Structure posted online?');
   t('Can Individuals Join as Members');
   t('Charter/Constitution/Other Formal Rules Structure Link to Documents');
