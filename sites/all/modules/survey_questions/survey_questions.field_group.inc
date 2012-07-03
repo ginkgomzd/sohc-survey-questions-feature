@@ -178,7 +178,7 @@ function survey_questions_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_main_wrapper';
   $field_group->data = array(
-    'label' => 'Communications',
+    'label' => 'Communications & Activities',
     'weight' => '26',
     'children' => array(
       0 => 'field_communications',
@@ -212,7 +212,7 @@ function survey_questions_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_main_wrapper';
   $field_group->data = array(
-    'label' => 'Communications',
+    'label' => 'Communications & Activities',
     'weight' => '25',
     'children' => array(
       0 => 'field_communications',
