@@ -3329,7 +3329,8 @@ o|Private citizens
           'available_options' => 'a|President/Chairperson
 b|Vice President
 c|Treasurer
-d|Secretary',
+d|Secretary
+e|Gofer',
           'available_options_php' => '',
           'markup_available_options_php' => '&lt;none&gt;',
           'other' => 'Other',
@@ -4210,7 +4211,7 @@ v|Medical/Dental Collaboration',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_rules_online',
-      'label' => 'Are your Charter/Constitution/Other Formal Rules Structure posted online?',
+      'label' => 'Are your Charter/Bylaws/Other Formal Rules Structure posted online?',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
