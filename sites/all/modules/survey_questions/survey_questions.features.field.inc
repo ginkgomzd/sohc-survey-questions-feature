@@ -3961,7 +3961,7 @@ v|Medical/Dental Collaboration',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_priorities_hp_2020',
-      'label' => 'Are any of your current priorities directly related to Health People 2020 goals?',
+      'label' => 'Are any of your current priorities directly related to Healthy People 2020 goals?',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -4900,7 +4900,7 @@ v|Medical/Dental Collaboration',
   // Included for use with string extractors like potx.
   t('(check all that apply)');
   t('Add as many orgs as you collaborate with.');
-  t('Are any of your current priorities directly related to Health People 2020 goals?');
+  t('Are any of your current priorities directly related to Healthy People 2020 goals?');
   t('Are your Charter/Constitution/Other Formal Rules Structure posted online?');
   t('Can Individuals Join as Members');
   t('Charter/Constitution/Other Formal Rules Structure Link to Documents');
