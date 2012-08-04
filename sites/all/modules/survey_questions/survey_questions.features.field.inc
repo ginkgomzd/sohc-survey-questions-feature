@@ -679,69 +679,6 @@ g|In-kind Services',
     ),
   );
 
-  // Exported field: 'node-coalition_profile-field_501c3'.
-  $fields['node-coalition_profile-field_501c3'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_501c3',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => 'N',
-          1 => 'Y',
-        ),
-        'allowed_values_function' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'list_boolean',
-    ),
-    'field_instance' => array(
-      'bundle' => 'coalition_profile',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'list',
-          'settings' => array(),
-          'type' => 'list_default',
-          'weight' => '14',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_501c3',
-      'label' => 'Incorporated as a 501(c)(3)?',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_buttons',
-        'weight' => '22',
-      ),
-    ),
-  );
-
   // Exported field: 'node-coalition_profile-field_address'.
   $fields['node-coalition_profile-field_address'] = array(
     'field_config' => array(
@@ -949,7 +886,7 @@ g|In-kind Services',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '37',
+        'weight' => '56',
       ),
     ),
   );
@@ -1342,7 +1279,7 @@ g|In-kind Services',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => '23',
+        'weight' => '42',
       ),
     ),
   );
@@ -1411,7 +1348,7 @@ g|In-kind Services',
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '29',
+        'weight' => '48',
       ),
     ),
   );
@@ -2445,7 +2382,7 @@ g|In-kind Services',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => '24',
+        'weight' => '43',
       ),
     ),
   );
@@ -2784,6 +2721,81 @@ e|Medicaid/CHIP Program',
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_incorporation_status'.
+  $fields['node-coalition_profile-field_incorporation_status'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_incorporation_status',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 88,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_incorporation_status',
+      'label' => 'Incorporation Status',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'select_or_other',
+        'settings' => array(
+          'available_options' => '3|501(c)(3)
+4|501(c)(4)',
+          'available_options_php' => '',
+          'markup_available_options_php' => '&lt;none&gt;',
+          'other' => 'Other (Please specify)',
+          'other_unknown_defaults' => 'other',
+          'sort_options' => 0,
+        ),
+        'type' => 'select_or_other_buttons',
+        'weight' => '41',
+      ),
+    ),
+  );
+
   // Exported field: 'node-coalition_profile-field_individual_members'.
   $fields['node-coalition_profile-field_individual_members'] = array(
     'field_config' => array(
@@ -2842,7 +2854,7 @@ e|Medicaid/CHIP Program',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '31',
+        'weight' => '50',
       ),
     ),
   );
@@ -2985,7 +2997,7 @@ c|Quarterly',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => '39',
+        'weight' => '58',
       ),
     ),
   );
@@ -3111,7 +3123,7 @@ c|Quarterly',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '34',
+        'weight' => '53',
       ),
     ),
   );
@@ -3174,7 +3186,7 @@ c|Quarterly',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '36',
+        'weight' => '55',
       ),
     ),
   );
@@ -3263,7 +3275,7 @@ o|Private citizens
           'sort_options' => 0,
         ),
         'type' => 'select_or_other_buttons',
-        'weight' => '33',
+        'weight' => '52',
       ),
     ),
   );
@@ -3331,7 +3343,7 @@ o|Private citizens
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '32',
+        'weight' => '51',
       ),
     ),
   );
@@ -3538,7 +3550,7 @@ e|Gofer',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other_buttons',
-        'weight' => '26',
+        'weight' => '45',
       ),
     ),
   );
@@ -3601,7 +3613,7 @@ e|Gofer',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '35',
+        'weight' => '54',
       ),
     ),
   );
@@ -4232,7 +4244,7 @@ v|Medical/Dental Collaboration',
         'module' => 'field_collection',
         'settings' => array(),
         'type' => 'field_collection_embed',
-        'weight' => '30',
+        'weight' => '49',
       ),
     ),
   );
@@ -4295,7 +4307,7 @@ v|Medical/Dental Collaboration',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '38',
+        'weight' => '57',
       ),
     ),
   );
@@ -4421,7 +4433,7 @@ v|Medical/Dental Collaboration',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '27',
+        'weight' => '46',
       ),
     ),
   );
@@ -4504,7 +4516,7 @@ v|Medical/Dental Collaboration',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '28',
+        'weight' => '47',
       ),
     ),
   );
@@ -5024,7 +5036,7 @@ v|Medical/Dental Collaboration',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => '25',
+        'weight' => '44',
       ),
     ),
   );
@@ -5211,7 +5223,7 @@ v|Medical/Dental Collaboration',
   t('If so, which organizations?');
   t('If yes, % of budget');
   t('In-Person Events (e.g., continuing education courses, presentations, policy development activities, annual summit/conference)');
-  t('Incorporated as a 501(c)(3)?');
+  t('Incorporation Status');
   t('Interested in partnering with other coalitions to provide educational trainings/webinars?');
   t('Is coalition a driver of state oral health plan?');
   t('Is your coalition a CDC Grantee?');
