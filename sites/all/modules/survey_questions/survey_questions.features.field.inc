@@ -815,7 +815,7 @@ g|In-kind Services',
           ),
         ),
         'type' => 'addressfield_standard',
-        'weight' => '2',
+        'weight' => '-4',
       ),
     ),
   );
@@ -1535,7 +1535,7 @@ g|In-kind Services',
         'module' => 'field_collection',
         'settings' => array(),
         'type' => 'field_collection_embed',
-        'weight' => '6',
+        'weight' => '2',
       ),
     ),
   );
@@ -2033,7 +2033,7 @@ g|In-kind Services',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '4',
+        'weight' => '-2',
       ),
     ),
   );
@@ -2435,7 +2435,7 @@ g|In-kind Services',
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '8',
+        'weight' => '4',
       ),
     ),
   );
@@ -3260,7 +3260,69 @@ o|Private citizens
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '7',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-coalition_profile-field_month_coalition_was_establ'.
+  $fields['node-coalition_profile-field_month_coalition_was_establ'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_month_coalition_was_establ',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'number',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'number_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 0,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_integer',
+          'weight' => 85,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_month_coalition_was_establ',
+      'label' => 'Month coalition was established',
+      'required' => 0,
+      'settings' => array(
+        'max' => '12',
+        'min' => '1',
+        'prefix' => '',
+        'suffix' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'number',
+        'settings' => array(),
+        'type' => 'number',
+        'weight' => '1',
       ),
     ),
   );
@@ -4667,7 +4729,7 @@ v|Medical/Dental Collaboration',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '5',
+        'weight' => '-1',
       ),
     ),
   );
@@ -4750,7 +4812,7 @@ v|Medical/Dental Collaboration',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '3',
+        'weight' => '-3',
       ),
     ),
   );
@@ -4896,12 +4958,74 @@ v|Medical/Dental Collaboration',
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_year_coaltion_was_establis'.
+  $fields['node-coalition_profile-field_year_coaltion_was_establis'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_year_coaltion_was_establis',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'number',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'number_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 0,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_integer',
+          'weight' => 84,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_year_coaltion_was_establis',
+      'label' => 'Year coaltion was established',
+      'required' => 0,
+      'settings' => array(
+        'max' => '2099',
+        'min' => '1900',
+        'prefix' => '',
+        'suffix' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'number',
+        'settings' => array(),
+        'type' => 'number',
+        'weight' => '0',
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('(check all that apply)');
   t('Add as many orgs as you collaborate with.');
   t('Are any of your current priorities directly related to Healthy People 2020 goals?');
-  t('Are your Charter/Constitution/Other Formal Rules Structure posted online?');
+  t('Are your Charter/Bylaws/Other Formal Rules Structure posted online?');
   t('Can Individuals Join as Members');
   t('Charter/Constitution/Other Formal Rules Structure Link to Documents');
   t('Co-located with other organizations?');
@@ -4961,6 +5085,7 @@ v|Medical/Dental Collaboration',
   t('Membership Dues?');
   t('Membership Open to Anyone?');
   t('Mission Statement');
+  t('Month coalition was established');
   t('Other Sources of Funding');
   t('Paper Newsletter');
   t('Percent of Budget');
@@ -4978,6 +5103,7 @@ v|Medical/Dental Collaboration',
   t('Twitter URL');
   t('Volunteer Staff');
   t('Webinars');
+  t('Year coaltion was established');
 
   return $fields;
 }
