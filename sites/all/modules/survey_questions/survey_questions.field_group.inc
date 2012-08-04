@@ -155,6 +155,7 @@ function survey_questions_field_group_info() {
       15 => 'field_rules_url',
       16 => 'field_volunteer_staff',
       17 => 'field_incorporation_status',
+      18 => 'field_501_h_election_',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

@@ -679,6 +679,70 @@ g|In-kind Services',
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_501_h_election_'.
+  $fields['node-coalition_profile-field_501_h_election_'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_501_h_election_',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => '',
+          1 => '',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '501(h) election with the IRS allows public charities to engage in lobbying
+within the limits of the Internal Revenue Code of 1976.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 89,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_501_h_election_',
+      'label' => 'If your coalition is a 501(c)(3), has the coalition made a 501(h) election with the IRS?',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '42',
+      ),
+    ),
+  );
+
   // Exported field: 'node-coalition_profile-field_address'.
   $fields['node-coalition_profile-field_address'] = array(
     'field_config' => array(
@@ -886,7 +950,7 @@ g|In-kind Services',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '56',
+        'weight' => '57',
       ),
     ),
   );
@@ -1279,7 +1343,7 @@ g|In-kind Services',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => '42',
+        'weight' => '43',
       ),
     ),
   );
@@ -1348,7 +1412,7 @@ g|In-kind Services',
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '48',
+        'weight' => '49',
       ),
     ),
   );
@@ -2382,7 +2446,7 @@ g|In-kind Services',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => '43',
+        'weight' => '44',
       ),
     ),
   );
@@ -2854,7 +2918,7 @@ e|Medicaid/CHIP Program',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '50',
+        'weight' => '51',
       ),
     ),
   );
@@ -2997,7 +3061,7 @@ c|Quarterly',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => '58',
+        'weight' => '59',
       ),
     ),
   );
@@ -3123,7 +3187,7 @@ c|Quarterly',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '53',
+        'weight' => '54',
       ),
     ),
   );
@@ -3186,7 +3250,7 @@ c|Quarterly',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '55',
+        'weight' => '56',
       ),
     ),
   );
@@ -3275,7 +3339,7 @@ o|Private citizens
           'sort_options' => 0,
         ),
         'type' => 'select_or_other_buttons',
-        'weight' => '52',
+        'weight' => '53',
       ),
     ),
   );
@@ -3343,7 +3407,7 @@ o|Private citizens
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '51',
+        'weight' => '52',
       ),
     ),
   );
@@ -3550,7 +3614,7 @@ e|Gofer',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other_buttons',
-        'weight' => '45',
+        'weight' => '46',
       ),
     ),
   );
@@ -3613,7 +3677,7 @@ e|Gofer',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '54',
+        'weight' => '55',
       ),
     ),
   );
@@ -4244,7 +4308,7 @@ v|Medical/Dental Collaboration',
         'module' => 'field_collection',
         'settings' => array(),
         'type' => 'field_collection_embed',
-        'weight' => '49',
+        'weight' => '50',
       ),
     ),
   );
@@ -4307,7 +4371,7 @@ v|Medical/Dental Collaboration',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '57',
+        'weight' => '58',
       ),
     ),
   );
@@ -4433,7 +4497,7 @@ v|Medical/Dental Collaboration',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '46',
+        'weight' => '47',
       ),
     ),
   );
@@ -4516,7 +4580,7 @@ v|Medical/Dental Collaboration',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '47',
+        'weight' => '48',
       ),
     ),
   );
@@ -5036,7 +5100,7 @@ v|Medical/Dental Collaboration',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => '44',
+        'weight' => '45',
       ),
     ),
   );
@@ -5173,6 +5237,8 @@ v|Medical/Dental Collaboration',
   // Translatables
   // Included for use with string extractors like potx.
   t('(check all that apply)');
+  t('501(h) election with the IRS allows public charities to engage in lobbying
+within the limits of the Internal Revenue Code of 1976.');
   t('Add as many orgs as you collaborate with.');
   t('Are any of your current priorities directly related to Healthy People 2020 goals?');
   t('Are your Charter/Bylaws/Other Formal Rules Structure posted online?');
@@ -5222,6 +5288,7 @@ v|Medical/Dental Collaboration',
   t('If so, which ones?');
   t('If so, which organizations?');
   t('If yes, % of budget');
+  t('If your coalition is a 501(c)(3), has the coalition made a 501(h) election with the IRS?');
   t('In-Person Events (e.g., continuing education courses, presentations, policy development activities, annual summit/conference)');
   t('Incorporation Status');
   t('Interested in partnering with other coalitions to provide educational trainings/webinars?');
