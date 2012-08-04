@@ -815,7 +815,7 @@ g|In-kind Services',
           ),
         ),
         'type' => 'addressfield_standard',
-        'weight' => '-4',
+        'weight' => '-2',
       ),
     ),
   );
@@ -1535,7 +1535,7 @@ g|In-kind Services',
         'module' => 'field_collection',
         'settings' => array(),
         'type' => 'field_collection_embed',
-        'weight' => '2',
+        'weight' => '4',
       ),
     ),
   );
@@ -1601,6 +1601,144 @@ g|In-kind Services',
         'settings' => array(),
         'type' => 'options_buttons',
         'weight' => '36',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-coalition_profile-field_director_name'.
+  $fields['node-coalition_profile-field_director_name'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_director_name',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 86,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_director_name',
+      'label' => 'Director Name',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '-4',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-coalition_profile-field_director_title'.
+  $fields['node-coalition_profile-field_director_title'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_director_title',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 87,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_director_title',
+      'label' => 'Director TItle',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '-3',
       ),
     ),
   );
@@ -2033,7 +2171,7 @@ g|In-kind Services',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '-2',
+        'weight' => '0',
       ),
     ),
   );
@@ -2435,7 +2573,7 @@ g|In-kind Services',
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '4',
+        'weight' => '6',
       ),
     ),
   );
@@ -3260,7 +3398,7 @@ o|Private citizens
           'rows' => '5',
         ),
         'type' => 'text_textarea',
-        'weight' => '3',
+        'weight' => '5',
       ),
     ),
   );
@@ -3322,7 +3460,7 @@ o|Private citizens
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '1',
+        'weight' => '3',
       ),
     ),
   );
@@ -4729,7 +4867,7 @@ v|Medical/Dental Collaboration',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '-1',
+        'weight' => '1',
       ),
     ),
   );
@@ -4812,7 +4950,7 @@ v|Medical/Dental Collaboration',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '-3',
+        'weight' => '-1',
       ),
     ),
   );
@@ -5015,7 +5153,7 @@ v|Medical/Dental Collaboration',
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '0',
+        'weight' => '2',
       ),
     ),
   );
@@ -5036,6 +5174,8 @@ v|Medical/Dental Collaboration',
   t('Contact Type');
   t('Contacts');
   t('Current Priorities');
+  t('Director Name');
+  t('Director TItle');
   t('Do Members Have Voting Rights?');
   t('Does coalition have a formal evaluation plan?');
   t('Does your coalition collaborate with coalitions/organizations outside of oral health?');

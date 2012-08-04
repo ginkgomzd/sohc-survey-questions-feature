@@ -345,8 +345,10 @@ function survey_questions_field_group_info() {
       5 => 'field_twitter',
       6 => 'field_url',
       7 => 'field_year_coaltion_was_establis',
-      8 => 'title',
-      9 => 'field_month_coalition_was_establ',
+      8 => 'field_month_coalition_was_establ',
+      9 => 'field_director_name',
+      10 => 'field_director_title',
+      11 => 'title',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
