@@ -68,6 +68,7 @@ function survey_questions_field_group_info() {
       7 => 'field_formal_fundraising_plan',
       8 => 'field_funding_other_sources',
       9 => 'field_member_dues',
+      10 => 'field_does_your_coalition_receiv',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

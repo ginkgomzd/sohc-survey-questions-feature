@@ -49,6 +49,7 @@ features[field][] = node-coalition_profile-field_director_name
 features[field][] = node-coalition_profile-field_director_title
 features[field][] = node-coalition_profile-field_does_collab_which_ones
 features[field][] = node-coalition_profile-field_does_collaborate
+features[field][] = node-coalition_profile-field_does_your_coalition_receiv
 features[field][] = node-coalition_profile-field_dues_structure
 features[field][] = node-coalition_profile-field_enews
 features[field][] = node-coalition_profile-field_evaluation_plan

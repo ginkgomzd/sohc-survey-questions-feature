@@ -1875,6 +1875,69 @@ within the limits of the Internal Revenue Code of 1976.',
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_does_your_coalition_receiv'.
+  $fields['node-coalition_profile-field_does_your_coalition_receiv'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_does_your_coalition_receiv',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => '',
+          1 => '',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 91,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_does_your_coalition_receiv',
+      'label' => 'Does your coalition receive donations in the form of in-kind services?',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '31',
+      ),
+    ),
+  );
+
   // Exported field: 'node-coalition_profile-field_dues_structure'.
   $fields['node-coalition_profile-field_dues_structure'] = array(
     'field_config' => array(
@@ -5342,6 +5405,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Does your coalition engage in direct lobbying?');
   t('Does your coalition have a formal fundraising plan?');
   t('Does your coalition have a strategic plan or coalition action plan?');
+  t('Does your coalition receive donations in the form of in-kind services?');
   t('Does your coalition regularly partner with other organizations to host events?');
   t('Does your coalition use a fiscal agent?');
   t('Does your coalition utilize any other tools or strategies such as a policy scan to identify goals and priorities?');
