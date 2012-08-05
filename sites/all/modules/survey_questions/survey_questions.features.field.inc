@@ -1142,6 +1142,142 @@ within the limits of the Internal Revenue Code of 1976.',
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_charter_bylaws'.
+  $fields['node-coalition_profile-field_charter_bylaws'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_charter_bylaws',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => '',
+          1 => '',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 94,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_charter_bylaws',
+      'label' => 'Does your coalition have Charter/Bylaws/Other Formal Rules Structure?',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '48',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-coalition_profile-field_charter_files'.
+  $fields['node-coalition_profile-field_charter_files'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_charter_files',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'deleted' => '0',
+      'description' => 'pdf required',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 93,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_charter_files',
+      'label' => 'Please upload any Charter/By-Laws documents.',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => 'charters',
+        'file_extensions' => 'txt pdf',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'file',
+        'settings' => array(
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'file_generic',
+        'weight' => '49',
+      ),
+    ),
+  );
+
   // Exported field: 'node-coalition_profile-field_collab_national'.
   $fields['node-coalition_profile-field_collab_national'] = array(
     'field_config' => array(
@@ -4582,152 +4718,6 @@ v|Medical/Dental collaboration',
     ),
   );
 
-  // Exported field: 'node-coalition_profile-field_rules_online'.
-  $fields['node-coalition_profile-field_rules_online'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_rules_online',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => 'N',
-          1 => 'Y',
-        ),
-        'allowed_values_function' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'list_boolean',
-    ),
-    'field_instance' => array(
-      'bundle' => 'coalition_profile',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'list',
-          'settings' => array(),
-          'type' => 'list_default',
-          'weight' => '19',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_rules_online',
-      'label' => 'Are your Charter/Bylaws/Other Formal Rules Structure posted online?',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_buttons',
-        'weight' => '48',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-coalition_profile-field_rules_url'.
-  $fields['node-coalition_profile-field_rules_url'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_rules_url',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'coalition_profile',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => 'Supply the URL/Link to the documents. Supply multiple links if needed.',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '20',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_rules_url',
-      'label' => 'Charter/Constitution/Other Formal Rules Structure Link to Documents',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => '_blank',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'none',
-        'title_maxlength' => '255',
-        'title_value' => '',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '49',
-      ),
-    ),
-  );
-
   // Exported field: 'node-coalition_profile-field_staff_position_documents'.
   $fields['node-coalition_profile-field_staff_position_documents'] = array(
     'field_config' => array(
@@ -5457,9 +5447,7 @@ v|Medical/Dental collaboration',
 within the limits of the Internal Revenue Code of 1976.');
   t('Add as many orgs as you collaborate with.');
   t('Are any of your current priorities directly related to Healthy People 2020 goals?');
-  t('Are your Charter/Bylaws/Other Formal Rules Structure posted online?');
   t('Can Individuals Join as Members');
-  t('Charter/Constitution/Other Formal Rules Structure Link to Documents');
   t('Co-located and/or co-staffed with other organizations?');
   t('Coalition Address');
   t('Coalition Goals');
@@ -5476,6 +5464,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Does your coalition collaborate with coalitions/organizations outside of oral health?');
   t('Does your coalition collaborate with national oral health organizations?');
   t('Does your coalition engage in direct lobbying?');
+  t('Does your coalition have Charter/Bylaws/Other Formal Rules Structure?');
   t('Does your coalition have a formal fundraising plan?');
   t('Does your coalition have a strategic plan or coalition action plan?');
   t('Does your coalition receive donations in the form of in-kind services?');
@@ -5526,6 +5515,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Paper Newsletter');
   t('Percent of Budget');
   t('Phone');
+  t('Please upload any Charter/By-Laws documents.');
   t('Please upload any staff position description documents.');
   t('Press Releases');
   t('Regional Coalition');
@@ -5536,7 +5526,6 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Size of Membership');
   t('Specify Source');
   t('Specity Flat Fee Amount');
-  t('Supply the URL/Link to the documents. Supply multiple links if needed.');
   t('Twitter URL');
   t('Volunteer Staff');
   t('Webinars');
