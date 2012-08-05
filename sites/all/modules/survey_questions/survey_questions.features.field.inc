@@ -1172,7 +1172,7 @@ within the limits of the Internal Revenue Code of 1976.',
       'bundle' => 'coalition_profile',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => '(e.g. - Charter/Bylaws/Constitution)',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1190,7 +1190,7 @@ within the limits of the Internal Revenue Code of 1976.',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_charter_bylaws',
-      'label' => 'Does your coalition have Charter/Bylaws/Other Formal Rules Structure?',
+      'label' => 'Does your coalition have a formal rules structure?',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -5518,6 +5518,7 @@ v|Medical/Dental collaboration',
   // Translatables
   // Included for use with string extractors like potx.
   t('(check all that apply)');
+  t('(e.g. - Charter/Bylaws/Constitution)');
   t('501(h) election with the IRS allows public charities to engage in lobbying
 within the limits of the Internal Revenue Code of 1976.');
   t('Add as many orgs as you collaborate with.');
@@ -5539,8 +5540,8 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Does your coalition collaborate with coalitions/organizations outside of oral health?');
   t('Does your coalition collaborate with national oral health organizations?');
   t('Does your coalition engage in direct lobbying?');
-  t('Does your coalition have Charter/Bylaws/Other Formal Rules Structure?');
   t('Does your coalition have a formal fundraising plan?');
+  t('Does your coalition have a formal rules structure?');
   t('Does your coalition have a strategic plan or coalition action plan?');
   t('Does your coalition receive donations in the form of in-kind services?');
   t('Does your coalition regularly partner with other organizations to host events?');
