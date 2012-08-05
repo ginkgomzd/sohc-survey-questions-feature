@@ -903,44 +903,48 @@ within the limits of the Internal Revenue Code of 1976.',
     ),
   );
 
-  // Exported field: 'node-coalition_profile-field_application_online'.
-  $fields['node-coalition_profile-field_application_online'] = array(
+  // Exported field: 'node-coalition_profile-field_application_document'.
+  $fields['node-coalition_profile-field_application_document'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_application_online',
-      'foreign keys' => array(),
+      'field_name' => 'field_application_document',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
       'indexes' => array(
-        'value' => array(
-          0 => 'value',
+        'fid' => array(
+          0 => 'fid',
         ),
       ),
       'locked' => '0',
-      'module' => 'list',
+      'module' => 'file',
       'settings' => array(
-        'allowed_values' => array(
-          0 => 'N',
-          1 => 'Y',
-        ),
-        'allowed_values_function' => '',
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
       ),
       'translatable' => '0',
-      'type' => 'list_boolean',
+      'type' => 'file',
     ),
     'field_instance' => array(
       'bundle' => 'coalition_profile',
-      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
+          'module' => 'file',
           'settings' => array(),
-          'type' => 'list_default',
-          'weight' => '29',
+          'type' => 'file_default',
+          'weight' => 97,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -950,17 +954,23 @@ within the limits of the Internal Revenue Code of 1976.',
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_application_online',
-      'label' => 'If so, is it posted on website?',
+      'field_name' => 'field_application_document',
+      'label' => 'If so, please upload',
       'required' => 0,
       'settings' => array(
+        'description_field' => 0,
+        'file_directory' => 'applications',
+        'file_extensions' => 'txt pdf',
+        'max_filesize' => '',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_buttons',
+        'module' => 'file',
+        'settings' => array(
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'file_generic',
         'weight' => '60',
       ),
     ),
@@ -3251,7 +3261,7 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
       ),
       'entity_type' => 'node',
       'field_name' => 'field_individual_members',
-      'label' => 'Can Individuals Join as Members',
+      'label' => 'Can Individuals Join as Members?',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -3583,7 +3593,7 @@ c|Quarterly',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_membership_application',
-      'label' => 'Membership Application?',
+      'label' => 'Does your coalition have a membership application or criteria document?',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -5598,7 +5608,7 @@ v|Medical/Dental collaboration',
 within the limits of the Internal Revenue Code of 1976.');
   t('Add as many orgs as you collaborate with.');
   t('Are any of your current priorities directly related to Healthy People 2020 goals?');
-  t('Can Individuals Join as Members');
+  t('Can Individuals Join as Members?');
   t('Co-located and/or co-staffed with other organizations?');
   t('Coalition Address');
   t('Coalition Goals');
@@ -5617,6 +5627,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Does your coalition engage in direct lobbying?');
   t('Does your coalition have a formal fundraising plan?');
   t('Does your coalition have a formal rules structure?');
+  t('Does your coalition have a membership application or criteria document?');
   t('Does your coalition have a membership?');
   t('Does your coalition have a strategic plan or coalition action plan?');
   t('Does your coalition receive donations in the form of in-kind services?');
@@ -5640,8 +5651,8 @@ within the limits of the Internal Revenue Code of 1976.');
   t('If coalition has a formal evaluation plan, provide link to documents, if possible');
   t('If so, are they formally affiliated with the coaltion?');
   t('If so, are they:');
-  t('If so, is it posted on website?');
   t('If so, please identify them:');
+  t('If so, please upload');
   t('If so, provide link to documents, if possible');
   t('If so, which ones?');
   t('If so, which organizations?');
@@ -5657,7 +5668,6 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Leave blank if none.');
   t('List Committees:');
   t('List Each of the Regional Coalitions');
-  t('Membership Application?');
   t('Membership Composition (check all that apply)');
   t('Membership Dues?');
   t('Membership Open to Anyone?');
