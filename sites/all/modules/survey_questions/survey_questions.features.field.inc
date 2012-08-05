@@ -4171,7 +4171,7 @@ e|Gofer',
 b|Children (e.g., coverage, access, financing)
 c|Adults (e.g., coverage, access, financing)
 d|Aging population (e.g., coverage, access, financing)
-e|Public Education
+e|Public education
 f|Surveillance
 g|Early childhood caries
 h|Periodontal disease
@@ -4188,10 +4188,10 @@ r|Expansion of safety-net
 s|New workforce models
 t|Scope of practice
 u|Implementation of healthcare reform
-v|Medical/Dental Collaboration',
+v|Medical/Dental collaboration',
           'available_options_php' => '',
           'markup_available_options_php' => '&lt;none&gt;',
-          'other' => 'Other, Please Specify:',
+          'other' => 'Other (Please specify)',
           'other_unknown_defaults' => 'other',
           'sort_options' => 0,
         ),
