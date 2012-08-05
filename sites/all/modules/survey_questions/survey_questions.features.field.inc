@@ -2689,7 +2689,8 @@ e|Medicaid/CHIP Program',
       'bundle' => 'coalition_profile',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '(check all that apply)',
+      'description' => 'grassroots lobbying -- e.g. organizing the public to communicate with policymakers about an issue.
+direct lobbying -- e.g. direct contact with government officials/staff to influence legislation.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -2707,7 +2708,7 @@ e|Medicaid/CHIP Program',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_grassroot_lobby_level',
-      'label' => 'Does your coalition engage in grassroots lobbying/advocacy?',
+      'label' => 'Do your coalition advocacy efforts include grassroots lobbying and/or direct lobbying? (check all that apply)',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -5266,11 +5267,11 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Director Name');
   t('Director TItle');
   t('Do Members Have Voting Rights?');
+  t('Do your coalition advocacy efforts include grassroots lobbying and/or direct lobbying? (check all that apply)');
   t('Does coalition have a formal evaluation plan?');
   t('Does your coalition collaborate with coalitions/organizations outside of oral health?');
   t('Does your coalition collaborate with national oral health organizations?');
   t('Does your coalition engage in direct lobbying?');
-  t('Does your coalition engage in grassroots lobbying/advocacy?');
   t('Does your coalition have a formal fundraising plan?');
   t('Does your coalition have a strategic plan or coalition action plan?');
   t('Does your coalition regularly partner with other organizations to host events?');
@@ -5334,6 +5335,8 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Volunteer Staff');
   t('Webinars');
   t('Year coaltion was established');
+  t('grassroots lobbying -- e.g. organizing the public to communicate with policymakers about an issue.
+direct lobbying -- e.g. direct contact with government officials/staff to influence legislation.');
 
   return $fields;
 }
