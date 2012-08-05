@@ -961,7 +961,7 @@ within the limits of the Internal Revenue Code of 1976.',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '59',
+        'weight' => '60',
       ),
     ),
   );
@@ -3002,6 +3002,69 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_has_membership'.
+  $fields['node-coalition_profile-field_has_membership'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_has_membership',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => 'N',
+          1 => 'Y',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 96,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_has_membership',
+      'label' => 'Does your coalition have a membership?',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '53',
+      ),
+    ),
+  );
+
   // Exported field: 'node-coalition_profile-field_identifying_priorities'.
   $fields['node-coalition_profile-field_identifying_priorities'] = array(
     'field_config' => array(
@@ -3198,7 +3261,7 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '53',
+        'weight' => '54',
       ),
     ),
   );
@@ -3341,7 +3404,7 @@ c|Quarterly',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => '61',
+        'weight' => '62',
       ),
     ),
   );
@@ -3467,7 +3530,7 @@ c|Quarterly',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '56',
+        'weight' => '57',
       ),
     ),
   );
@@ -3530,7 +3593,7 @@ c|Quarterly',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '58',
+        'weight' => '59',
       ),
     ),
   );
@@ -3630,7 +3693,7 @@ c|Quarterly',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other_buttons',
-        'weight' => '55',
+        'weight' => '56',
       ),
     ),
   );
@@ -3698,7 +3761,7 @@ c|Quarterly',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '54',
+        'weight' => '55',
       ),
     ),
   );
@@ -3968,7 +4031,7 @@ e|Gofer',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '57',
+        'weight' => '58',
       ),
     ),
   );
@@ -4737,7 +4800,7 @@ v|Medical/Dental collaboration',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '60',
+        'weight' => '61',
       ),
     ),
   );
@@ -5554,6 +5617,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Does your coalition engage in direct lobbying?');
   t('Does your coalition have a formal fundraising plan?');
   t('Does your coalition have a formal rules structure?');
+  t('Does your coalition have a membership?');
   t('Does your coalition have a strategic plan or coalition action plan?');
   t('Does your coalition receive donations in the form of in-kind services?');
   t('Does your coalition regularly partner with other organizations to host events?');

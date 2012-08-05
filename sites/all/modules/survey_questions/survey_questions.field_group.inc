@@ -159,6 +159,7 @@ function survey_questions_field_group_info() {
       18 => 'field_charter_files',
       19 => 'field_charter_bylaws',
       20 => 'field_part_time_staff_',
+      21 => 'field_has_membership',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
