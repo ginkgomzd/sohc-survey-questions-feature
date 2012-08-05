@@ -3316,21 +3316,32 @@ c|Quarterly',
         'active' => 1,
         'module' => 'select_or_other',
         'settings' => array(
-          'available_options' => 'a|Organized Dentistry
-b|Organized Dental Hygiene
-c|Organized Medicine
-d|Private Dentists/Hygienists
-e|School Nurses
-f|FQHC Staff
-g|Other healthcare professionals
-h|State legislators
-i|Local government officials
-j|State government agency staff
-k|Medicaid/CHIP staff
-l|Oral Health Program staff
-m|Oral Health Educators
-n|Public School Staff/Administrators
-o|Private citizens
+          'available_options' => '1a|Community -- clinics
+1b|Community -- water supervisory and/or other boards
+1c|Community -- business leaders
+1d|Community -- faith-based organizations
+1e|Community -- foundations
+2a|Education: Public Structure -- local school administration
+2b|Education: Public Structure -- school nurses
+2c|Education: Public Structure -- education agencies
+3a|Government -- state/local health departments
+3b|Government -- interagency committees
+4a|Higher Education/Professional Academic -- dental, dental hygiene
+4b|Higher Education/Professional Academic -- medical, nursing
+4c|Higher Education/Professional Academic -- allied health
+5a|Policy -- Legislators/Staff
+5b|Policy -- Policy Advocates
+6a|Providers -- Dental professional associations
+6b|Providers -- Medical professional associations
+6c|Providers -- Hospital and safety net associations
+7a|Public -- School Staff and Administrators
+7b|Public -- Private Consumer Advocates
+7c|Public -- Patient Care Advocates
+7d|Public -- Oral Health Advocates
+7e|Public -- Private Citizens
+8a|Third-Party Payers -- Managed Care
+8b|Third-Party Payers -- Insurers
+8c|Third-Party Payers -- Medicaid/CHIP
 ',
           'available_options_php' => '',
           'markup_available_options_php' => '&lt;none&gt;',
