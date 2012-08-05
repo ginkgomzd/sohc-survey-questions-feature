@@ -1325,7 +1325,7 @@ within the limits of the Internal Revenue Code of 1976.',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_colocated',
-      'label' => 'Co-located with other organizations?',
+      'label' => 'Co-located and/or co-staffed with other organizations?',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -5244,7 +5244,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Are your Charter/Bylaws/Other Formal Rules Structure posted online?');
   t('Can Individuals Join as Members');
   t('Charter/Constitution/Other Formal Rules Structure Link to Documents');
-  t('Co-located with other organizations?');
+  t('Co-located and/or co-staffed with other organizations?');
   t('Coalition Address');
   t('Coalition Goals');
   t('Coalition Website');
