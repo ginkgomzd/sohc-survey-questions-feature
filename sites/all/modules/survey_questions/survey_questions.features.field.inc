@@ -949,7 +949,7 @@ within the limits of the Internal Revenue Code of 1976.',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '57',
+        'weight' => '58',
       ),
     ),
   );
@@ -1411,7 +1411,7 @@ within the limits of the Internal Revenue Code of 1976.',
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '49',
+        'weight' => '50',
       ),
     ),
   );
@@ -3050,7 +3050,7 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '51',
+        'weight' => '52',
       ),
     ),
   );
@@ -3193,7 +3193,7 @@ c|Quarterly',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => '59',
+        'weight' => '60',
       ),
     ),
   );
@@ -3319,7 +3319,7 @@ c|Quarterly',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '54',
+        'weight' => '55',
       ),
     ),
   );
@@ -3382,7 +3382,7 @@ c|Quarterly',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '56',
+        'weight' => '57',
       ),
     ),
   );
@@ -3482,7 +3482,7 @@ c|Quarterly',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other_buttons',
-        'weight' => '53',
+        'weight' => '54',
       ),
     ),
   );
@@ -3550,7 +3550,7 @@ c|Quarterly',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '52',
+        'weight' => '53',
       ),
     ),
   );
@@ -3820,7 +3820,7 @@ e|Gofer',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '55',
+        'weight' => '56',
       ),
     ),
   );
@@ -4451,7 +4451,7 @@ v|Medical/Dental collaboration',
         'module' => 'field_collection',
         'settings' => array(),
         'type' => 'field_collection_embed',
-        'weight' => '50',
+        'weight' => '51',
       ),
     ),
   );
@@ -4514,7 +4514,7 @@ v|Medical/Dental collaboration',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '58',
+        'weight' => '59',
       ),
     ),
   );
@@ -4640,7 +4640,7 @@ v|Medical/Dental collaboration',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '47',
+        'weight' => '48',
       ),
     ),
   );
@@ -4723,7 +4723,80 @@ v|Medical/Dental collaboration',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '48',
+        'weight' => '49',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-coalition_profile-field_staff_position_documents'.
+  $fields['node-coalition_profile-field_staff_position_documents'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_staff_position_documents',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'deleted' => '0',
+      'description' => 'pdf required',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 92,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_staff_position_documents',
+      'label' => 'Please upload any staff position description documents.',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 1,
+        'file_directory' => 'staff_positions',
+        'file_extensions' => 'txt pdf',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'file',
+        'settings' => array(
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'file_generic',
+        'weight' => '47',
       ),
     ),
   );
@@ -5453,6 +5526,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Paper Newsletter');
   t('Percent of Budget');
   t('Phone');
+  t('Please upload any staff position description documents.');
   t('Press Releases');
   t('Regional Coalition');
   t('Regional Coalition Name');
@@ -5469,6 +5543,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Year coaltion was established');
   t('grassroots lobbying -- e.g. organizing the public to communicate with policymakers about an issue.
 direct lobbying -- e.g. direct contact with government officials/staff to influence legislation.');
+  t('pdf required');
 
   return $fields;
 }
