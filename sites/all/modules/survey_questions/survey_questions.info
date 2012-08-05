@@ -84,6 +84,7 @@ features[field][] = node-coalition_profile-field_oral_health_driver
 features[field][] = node-coalition_profile-field_oral_health_links
 features[field][] = node-coalition_profile-field_oral_health_plan
 features[field][] = node-coalition_profile-field_paper_newsletter
+features[field][] = node-coalition_profile-field_part_time_staff_
 features[field][] = node-coalition_profile-field_partner_organizations
 features[field][] = node-coalition_profile-field_press_releases
 features[field][] = node-coalition_profile-field_priorities
