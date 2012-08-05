@@ -487,8 +487,7 @@ b|State Grants
 c|Foundation Funding
 d|Individual Donations
 e|Corporate Donations
-f|Training/Education revenue
-g|In-kind Services',
+f|Training/Education revenue',
           'available_options_php' => '',
           'markup_available_options_php' => '&lt;none&gt;',
           'other' => 'Other, Please Specify:',
