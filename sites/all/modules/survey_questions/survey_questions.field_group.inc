@@ -544,6 +544,7 @@ function survey_questions_field_group_info() {
       4 => 'field_government_entities',
       5 => 'field_grassroot_lobby_level',
       6 => 'field_priorities',
+      7 => 'field_does_collab_which_ones',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
