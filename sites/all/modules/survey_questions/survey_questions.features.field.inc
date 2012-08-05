@@ -696,8 +696,8 @@ f|Training/Education revenue',
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
-          0 => '',
-          1 => '',
+          0 => 'N',
+          1 => 'Y',
         ),
         'allowed_values_function' => '',
       ),
@@ -1160,8 +1160,8 @@ within the limits of the Internal Revenue Code of 1976.',
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
-          0 => '',
-          1 => '',
+          0 => 'N',
+          1 => 'Y',
         ),
         'allowed_values_function' => '',
       ),
@@ -2029,8 +2029,8 @@ within the limits of the Internal Revenue Code of 1976.',
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
-          0 => '',
-          1 => '',
+          0 => 'N',
+          1 => 'Y',
         ),
         'allowed_values_function' => '',
       ),
