@@ -754,6 +754,79 @@ within the limits of the Internal Revenue Code of 1976.',
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_action_plan_document'.
+  $fields['node-coalition_profile-field_action_plan_document'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_action_plan_document',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 100,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_action_plan_document',
+      'label' => 'If so, upload plan documents:',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => 'action_plans',
+        'file_extensions' => 'pdf',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'file',
+        'settings' => array(
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'file_generic',
+        'weight' => '26',
+      ),
+    ),
+  );
+
   // Exported field: 'node-coalition_profile-field_address'.
   $fields['node-coalition_profile-field_address'] = array(
     'field_config' => array(
@@ -3343,14 +3416,14 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
     ),
   );
 
-  // Exported field: 'node-coalition_profile-field_legislative_advocay'.
-  $fields['node-coalition_profile-field_legislative_advocay'] = array(
+  // Exported field: 'node-coalition_profile-field_legislative_advocacy'.
+  $fields['node-coalition_profile-field_legislative_advocacy'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_legislative_advocay',
+      'field_name' => 'field_legislative_advocacy',
       'foreign keys' => array(),
       'indexes' => array(
         'value' => array(
@@ -3390,7 +3463,7 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_legislative_advocay',
+      'field_name' => 'field_legislative_advocacy',
       'label' => 'Does your coalition have an advocacy plan or legislative action agenda?',
       'required' => 0,
       'settings' => array(
@@ -3402,6 +3475,79 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
         'settings' => array(),
         'type' => 'options_buttons',
         'weight' => '27',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-coalition_profile-field_legislative_plan_documents'.
+  $fields['node-coalition_profile-field_legislative_plan_documents'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_legislative_plan_documents',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 99,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_legislative_plan_documents',
+      'label' => 'If so, upload plan documents:',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => 'legislative_plans',
+        'file_extensions' => 'pdf',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'file',
+        'settings' => array(
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'file_generic',
+        'weight' => '28',
       ),
     ),
   );
@@ -4167,7 +4313,7 @@ e|Gofer',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '30',
+        'weight' => '31',
       ),
     ),
   );
@@ -4250,7 +4396,7 @@ e|Gofer',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '29',
+        'weight' => '30',
       ),
     ),
   );
@@ -4313,7 +4459,7 @@ e|Gofer',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '28',
+        'weight' => '29',
       ),
     ),
   );
@@ -4749,7 +4895,7 @@ v|Medical/Dental collaboration',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '31',
+        'weight' => '32',
       ),
     ),
   );
@@ -5075,89 +5221,6 @@ v|Medical/Dental collaboration',
         'settings' => array(),
         'type' => 'options_buttons',
         'weight' => '25',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-coalition_profile-field_strategic_plan_links'.
-  $fields['node-coalition_profile-field_strategic_plan_links'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '-1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_strategic_plan_links',
-      'foreign keys' => array(),
-      'indexes' => array(),
-      'locked' => '0',
-      'module' => 'link',
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
-      ),
-      'translatable' => '0',
-      'type' => 'link_field',
-    ),
-    'field_instance' => array(
-      'bundle' => 'coalition_profile',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'link',
-          'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '16',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_strategic_plan_links',
-      'label' => 'If so, provide link to documents, if possible',
-      'required' => 0,
-      'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => '_blank',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'none',
-        'title_maxlength' => '128',
-        'title_value' => '',
-        'url' => 0,
-        'user_register_form' => FALSE,
-        'validate_url' => 1,
-      ),
-      'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '26',
       ),
     ),
   );
@@ -5718,6 +5781,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('If so, please identify them:');
   t('If so, please upload');
   t('If so, provide link to documents, if possible');
+  t('If so, upload plan documents:');
   t('If so, which ones?');
   t('If so, which organizations?');
   t('If yes, % of budget');

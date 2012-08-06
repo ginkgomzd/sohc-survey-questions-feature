@@ -481,9 +481,10 @@ function survey_questions_field_group_info() {
       3 => 'field_oral_health_plan',
       4 => 'field_priorities_hp_2020',
       5 => 'field_strategic_plan_length',
-      6 => 'field_strategic_plan_links',
-      7 => 'field_tools_identify_priorities',
-      8 => 'field_legislative_advocay',
+      6 => 'field_tools_identify_priorities',
+      7 => 'field_legislative_advocacy',
+      8 => 'field_legislative_plan_documents',
+      9 => 'field_action_plan_document',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
