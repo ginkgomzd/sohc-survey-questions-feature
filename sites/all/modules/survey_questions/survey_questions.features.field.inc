@@ -2529,6 +2529,73 @@ within the limits of the Internal Revenue Code of 1976.',
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_example_events'.
+  $fields['node-coalition_profile-field_example_events'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_example_events',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 103,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_example_events',
+      'label' => 'If so, provide examples of events:',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '5',
+        ),
+        'type' => 'text_textarea',
+        'weight' => '63',
+      ),
+    ),
+  );
+
   // Exported field: 'node-coalition_profile-field_facebook'.
   $fields['node-coalition_profile-field_facebook'] = array(
     'field_config' => array(
@@ -3456,7 +3523,7 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
       'bundle' => 'coalition_profile',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => '(e.g., continuing education courses, presentations, policy development activities, annual summit/conference)',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -3474,7 +3541,7 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
       ),
       'entity_type' => 'node',
       'field_name' => 'field_inperson',
-      'label' => 'In-Person Events (e.g., continuing education courses, presentations, policy development activities, annual summit/conference)',
+      'label' => 'In-Person Events?',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -5929,6 +5996,7 @@ v|Medical/Dental collaboration',
   // Included for use with string extractors like potx.
   t('(check all that apply)');
   t('(e.g. - Charter/Bylaws/Constitution)');
+  t('(e.g., continuing education courses, presentations, policy development activities, annual summit/conference)');
   t('501(h) election with the IRS allows public charities to engage in lobbying
 within the limits of the Internal Revenue Code of 1976.');
   t('Add as many orgs as you collaborate with.');
@@ -5979,12 +6047,13 @@ within the limits of the Internal Revenue Code of 1976.');
   t('If so, are they:');
   t('If so, please identify them:');
   t('If so, please upload');
+  t('If so, provide examples of events:');
   t('If so, upload plan documents:');
   t('If so, which ones?');
   t('If so, which organizations?');
   t('If yes, % of budget');
   t('If your coalition is a 501(c)(3), has the coalition made a 501(h) election with the IRS?');
-  t('In-Person Events (e.g., continuing education courses, presentations, policy development activities, annual summit/conference)');
+  t('In-Person Events?');
   t('Incorporation Status');
   t('Interested in partnering with other coalitions to provide educational trainings/webinars?');
   t('Is coalition a driver (i.e. developing and monitoring implementation) of state oral health plan?');
