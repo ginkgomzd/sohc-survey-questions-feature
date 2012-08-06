@@ -218,7 +218,7 @@ function survey_questions_field_group_info() {
   $field_group->parent_name = 'group_main_wrapper';
   $field_group->data = array(
     'label' => 'Communications & Activities',
-    'weight' => '25',
+    'weight' => '23',
     'children' => array(
       0 => 'field_communications',
       1 => 'field_enews',
@@ -230,6 +230,7 @@ function survey_questions_field_group_info() {
       7 => 'field_training_partnering',
       8 => 'field_webinars',
       9 => 'field_comm_plan_documents',
+      10 => 'field_example_events',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -254,7 +255,7 @@ function survey_questions_field_group_info() {
   $field_group->parent_name = 'group_main_wrapper';
   $field_group->data = array(
     'label' => 'Evaluation',
-    'weight' => '26',
+    'weight' => '25',
     'children' => array(
       0 => 'field_evaluation_plan',
       1 => 'field_evaluation_plan_links',
