@@ -1695,7 +1695,7 @@ within the limits of the Internal Revenue Code of 1976.',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_communications',
-      'label' => 'Formal communications plan?',
+      'label' => 'Does your coalition have a formal communications plan and/or modalities?',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -5877,6 +5877,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Does your coalition collaborate with coalitions/organizations outside of oral health?');
   t('Does your coalition collaborate with national oral health organizations?');
   t('Does your coalition engage in direct lobbying?');
+  t('Does your coalition have a formal communications plan and/or modalities?');
   t('Does your coalition have a formal fundraising plan?');
   t('Does your coalition have a formal rules structure?');
   t('Does your coalition have a membership application or criteria document?');
@@ -5897,7 +5898,6 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Facebook URL');
   t('First Name');
   t('Formal Budgeting Process?');
-  t('Formal communications plan?');
   t('Full-time Staff');
   t('Funding Type');
   t('If So, How Often?');
