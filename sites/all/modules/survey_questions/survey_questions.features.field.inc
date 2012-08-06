@@ -3206,7 +3206,7 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '23',
+        'weight' => '33',
       ),
     ),
   );
@@ -5415,7 +5415,7 @@ v|Medical/Dental collaboration',
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '24',
+        'weight' => '34',
       ),
     ),
   );
