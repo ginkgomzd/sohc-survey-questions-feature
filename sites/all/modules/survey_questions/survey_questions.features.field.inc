@@ -3343,6 +3343,69 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_legislative_advocay'.
+  $fields['node-coalition_profile-field_legislative_advocay'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_legislative_advocay',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => 'N',
+          1 => 'Y',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 98,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_legislative_advocay',
+      'label' => 'Does your coalition have an advocacy plan or legislative action agenda?',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '27',
+      ),
+    ),
+  );
+
   // Exported field: 'node-coalition_profile-field_meeting_frequency'.
   $fields['node-coalition_profile-field_meeting_frequency'] = array(
     'field_config' => array(
@@ -4104,7 +4167,7 @@ e|Gofer',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '39',
+        'weight' => '30',
       ),
     ),
   );
@@ -4187,7 +4250,7 @@ e|Gofer',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '38',
+        'weight' => '29',
       ),
     ),
   );
@@ -4250,7 +4313,7 @@ e|Gofer',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '37',
+        'weight' => '28',
       ),
     ),
   );
@@ -4686,7 +4749,7 @@ v|Medical/Dental collaboration',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '40',
+        'weight' => '31',
       ),
     ),
   );
@@ -5011,7 +5074,7 @@ v|Medical/Dental collaboration',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '34',
+        'weight' => '25',
       ),
     ),
   );
@@ -5094,7 +5157,7 @@ v|Medical/Dental collaboration',
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_field',
-        'weight' => '35',
+        'weight' => '26',
       ),
     ),
   );
@@ -5630,6 +5693,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Does your coalition have a membership application or criteria document?');
   t('Does your coalition have a membership?');
   t('Does your coalition have a strategic plan or coalition action plan?');
+  t('Does your coalition have an advocacy plan or legislative action agenda?');
   t('Does your coalition receive donations in the form of in-kind services?');
   t('Does your coalition regularly partner with other organizations to host events?');
   t('Does your coalition use a fiscal agent?');

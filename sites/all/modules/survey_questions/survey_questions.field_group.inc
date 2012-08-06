@@ -483,6 +483,7 @@ function survey_questions_field_group_info() {
       5 => 'field_strategic_plan_length',
       6 => 'field_strategic_plan_links',
       7 => 'field_tools_identify_priorities',
+      8 => 'field_legislative_advocay',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

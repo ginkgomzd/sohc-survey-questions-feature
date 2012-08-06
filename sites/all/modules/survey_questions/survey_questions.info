@@ -71,6 +71,7 @@ features[field][] = node-coalition_profile-field_identifying_priorities
 features[field][] = node-coalition_profile-field_incorporation_status
 features[field][] = node-coalition_profile-field_individual_members
 features[field][] = node-coalition_profile-field_inperson
+features[field][] = node-coalition_profile-field_legislative_advocay
 features[field][] = node-coalition_profile-field_meeting_frequency
 features[field][] = node-coalition_profile-field_member_dues
 features[field][] = node-coalition_profile-field_member_voting
