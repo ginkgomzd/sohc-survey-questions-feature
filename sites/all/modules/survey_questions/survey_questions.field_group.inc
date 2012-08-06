@@ -229,6 +229,7 @@ function survey_questions_field_group_info() {
       6 => 'field_regularly_partner',
       7 => 'field_training_partnering',
       8 => 'field_webinars',
+      9 => 'field_comm_plan_documents',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

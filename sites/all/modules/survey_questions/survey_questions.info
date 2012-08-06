@@ -45,6 +45,7 @@ features[field][] = node-coalition_profile-field_charter_files
 features[field][] = node-coalition_profile-field_collab_national
 features[field][] = node-coalition_profile-field_collab_national_orgs
 features[field][] = node-coalition_profile-field_colocated
+features[field][] = node-coalition_profile-field_comm_plan_documents
 features[field][] = node-coalition_profile-field_committees
 features[field][] = node-coalition_profile-field_communications
 features[field][] = node-coalition_profile-field_contacts
