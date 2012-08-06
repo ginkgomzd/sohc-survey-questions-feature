@@ -4366,7 +4366,7 @@ e|Gofer',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_oral_health_driver',
-      'label' => 'Is coalition a driver of state oral health plan?',
+      'label' => 'Is coalition a driver (i.e. developing and monitoring implementation) of state oral health plan?',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -5140,6 +5140,79 @@ v|Medical/Dental collaboration',
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_state_pan_documents'.
+  $fields['node-coalition_profile-field_state_pan_documents'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_state_pan_documents',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'file',
+      'settings' => array(
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'file',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'file',
+          'settings' => array(),
+          'type' => 'file_default',
+          'weight' => 101,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_state_pan_documents',
+      'label' => 'If so, upload plan documents:',
+      'required' => 0,
+      'settings' => array(
+        'description_field' => 0,
+        'file_directory' => 'state_plans',
+        'file_extensions' => 'pdf',
+        'max_filesize' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'file',
+        'settings' => array(
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'file_generic',
+        'weight' => '30',
+      ),
+    ),
+  );
+
   // Exported field: 'node-coalition_profile-field_state_plan_documents'.
   $fields['node-coalition_profile-field_state_plan_documents'] = array(
     'field_config' => array(
@@ -5841,7 +5914,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('In-Person Events (e.g., continuing education courses, presentations, policy development activities, annual summit/conference)');
   t('Incorporation Status');
   t('Interested in partnering with other coalitions to provide educational trainings/webinars?');
-  t('Is coalition a driver of state oral health plan?');
+  t('Is coalition a driver (i.e. developing and monitoring implementation) of state oral health plan?');
   t('Is your coalition a CDC Grantee?');
   t('Is your state a CDC-funded state?');
   t('Last Name');
