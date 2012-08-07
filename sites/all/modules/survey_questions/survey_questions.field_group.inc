@@ -256,7 +256,7 @@ function survey_questions_field_group_info() {
   $field_group->parent_name = 'group_main_wrapper';
   $field_group->data = array(
     'label' => 'Evaluation',
-    'weight' => '25',
+    'weight' => '26',
     'children' => array(
       0 => 'field_evaluation_plan',
       1 => 'field_evaluation_plan_links',
@@ -414,13 +414,15 @@ function survey_questions_field_group_info() {
     'label' => 'Main Wrapper',
     'weight' => '0',
     'children' => array(
-      0 => 'group_budgetary_information',
-      1 => 'group_coalition_structure',
-      2 => 'group_communications',
-      3 => 'group_evaluation',
-      4 => 'group_general_information',
-      5 => 'group_planning',
-      6 => 'group_policy_and_advocacy',
+      0 => 'field_technical_assistance',
+      1 => 'field_tech_from_which',
+      2 => 'group_budgetary_information',
+      3 => 'group_coalition_structure',
+      4 => 'group_communications',
+      5 => 'group_evaluation',
+      6 => 'group_general_information',
+      7 => 'group_planning',
+      8 => 'group_policy_and_advocacy',
     ),
     'format_type' => 'tabs',
     'format_settings' => array(

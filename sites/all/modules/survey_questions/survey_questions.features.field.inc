@@ -5424,6 +5424,138 @@ v|Medical/Dental collaboration',
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_tech_from_which'.
+  $fields['node-coalition_profile-field_tech_from_which'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_tech_from_which',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 106,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_tech_from_which',
+      'label' => 'If yes, which organizations?',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '25',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-coalition_profile-field_technical_assistance'.
+  $fields['node-coalition_profile-field_technical_assistance'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_technical_assistance',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => 'N',
+          1 => 'Y',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_boolean',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(),
+          'type' => 'list_default',
+          'weight' => 105,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_technical_assistance',
+      'label' => 'Does your coalition receive technical assistance from other organizations at either the state or national level?',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_buttons',
+        'weight' => '24',
+      ),
+    ),
+  );
+
   // Exported field: 'node-coalition_profile-field_tools_identify_priorities'.
   $fields['node-coalition_profile-field_tools_identify_priorities'] = array(
     'field_config' => array(
@@ -5959,6 +6091,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Does your coalition have a strategic plan or coalition action plan?');
   t('Does your coalition have an advocacy plan or legislative action agenda?');
   t('Does your coalition receive donations in the form of in-kind services?');
+  t('Does your coalition receive technical assistance from other organizations at either the state or national level?');
   t('Does your coalition regularly partner with other organizations to host events?');
   t('Does your coalition use a fiscal agent?');
   t('Does your coalition utilize any other tools or strategies such as a policy scan to identify goals and priorities?');
@@ -5985,6 +6118,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('If so, which ones?');
   t('If so, which organizations?');
   t('If yes, % of budget');
+  t('If yes, which organizations?');
   t('If your coalition is a 501(c)(3), has the coalition made a 501(h) election with the IRS?');
   t('In-Person Events?');
   t('Incorporation Status');
