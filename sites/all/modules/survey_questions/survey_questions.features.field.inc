@@ -2446,48 +2446,48 @@ within the limits of the Internal Revenue Code of 1976.',
     ),
   );
 
-  // Exported field: 'node-coalition_profile-field_evaluation_plan_links'.
-  $fields['node-coalition_profile-field_evaluation_plan_links'] = array(
+  // Exported field: 'node-coalition_profile-field_evaluation_plan_docs'.
+  $fields['node-coalition_profile-field_evaluation_plan_docs'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_evaluation_plan_links',
-      'foreign keys' => array(),
-      'indexes' => array(),
+      'field_name' => 'field_evaluation_plan_docs',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
       'locked' => '0',
-      'module' => 'link',
+      'module' => 'file',
       'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'rel' => '',
-          'target' => 'default',
-        ),
-        'display' => array(
-          'url_cutoff' => 80,
-        ),
-        'enable_tokens' => 1,
-        'title' => 'optional',
-        'title_maxlength' => 128,
-        'title_value' => '',
-        'url' => 0,
+        'display_default' => 0,
+        'display_field' => 0,
+        'uri_scheme' => 'public',
       ),
       'translatable' => '0',
-      'type' => 'link_field',
+      'type' => 'file',
     ),
     'field_instance' => array(
       'bundle' => 'coalition_profile',
-      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'link',
+          'module' => 'file',
           'settings' => array(),
-          'type' => 'link_default',
-          'weight' => '6',
+          'type' => 'file_default',
+          'weight' => 107,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2497,34 +2497,24 @@ within the limits of the Internal Revenue Code of 1976.',
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_evaluation_plan_links',
-      'label' => 'If coalition has a formal evaluation plan, provide link to documents, if possible',
+      'field_name' => 'field_evaluation_plan_docs',
+      'label' => 'If so, upload plan documents:',
       'required' => 0,
       'settings' => array(
-        'attributes' => array(
-          'class' => '',
-          'configurable_title' => 0,
-          'rel' => '',
-          'target' => '_blank',
-          'title' => '',
-        ),
-        'display' => array(
-          'url_cutoff' => '80',
-        ),
-        'enable_tokens' => 1,
-        'title' => 'none',
-        'title_maxlength' => '128',
-        'title_value' => '',
-        'url' => 0,
+        'description_field' => 0,
+        'file_directory' => 'evaluation_plans',
+        'file_extensions' => 'pdf',
+        'max_filesize' => '',
         'user_register_form' => FALSE,
-        'validate_url' => 1,
       ),
       'widget' => array(
-        'active' => 0,
-        'module' => 'link',
-        'settings' => array(),
-        'type' => 'link_field',
-        'weight' => '26',
+        'active' => 1,
+        'module' => 'file',
+        'settings' => array(
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'file_generic',
+        'weight' => '25',
       ),
     ),
   );
@@ -6108,7 +6098,6 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Full-time Staff');
   t('Funding Type');
   t('If So, How Often?');
-  t('If coalition has a formal evaluation plan, provide link to documents, if possible');
   t('If so, are they formally affiliated with the coaltion?');
   t('If so, are they:');
   t('If so, please identify them:');

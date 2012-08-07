@@ -259,7 +259,7 @@ function survey_questions_field_group_info() {
     'weight' => '26',
     'children' => array(
       0 => 'field_evaluation_plan',
-      1 => 'field_evaluation_plan_links',
+      1 => 'field_evaluation_plan_docs',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
