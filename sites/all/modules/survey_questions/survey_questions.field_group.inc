@@ -231,6 +231,7 @@ function survey_questions_field_group_info() {
       8 => 'field_webinars',
       9 => 'field_comm_plan_documents',
       10 => 'field_example_events',
+      11 => 'field_list_conferences',
     ),
     'format_type' => 'tab',
     'format_settings' => array(
