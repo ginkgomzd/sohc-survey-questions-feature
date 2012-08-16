@@ -102,6 +102,7 @@ features[field][] = node-coalition_profile-field_regular_meetings
 features[field][] = node-coalition_profile-field_regularly_partner
 features[field][] = node-coalition_profile-field_staff_position_documents
 features[field][] = node-coalition_profile-field_state_plan_documents
+features[field][] = node-coalition_profile-field_state_plan_priorities
 features[field][] = node-coalition_profile-field_strategic_plan_length
 features[field][] = node-coalition_profile-field_tech_from_which
 features[field][] = node-coalition_profile-field_technical_assistance

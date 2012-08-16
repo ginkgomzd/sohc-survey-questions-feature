@@ -3427,7 +3427,7 @@ return $pf_pairs;',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other_buttons',
-        'weight' => '33',
+        'weight' => '34',
       ),
     ),
   );
@@ -3490,7 +3490,7 @@ return $pf_pairs;',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '34',
+        'weight' => '35',
       ),
     ),
   );
@@ -4666,7 +4666,7 @@ e|Gofer',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '31',
+        'weight' => '32',
       ),
     ),
   );
@@ -5165,7 +5165,7 @@ v|Medical/Dental collaboration',
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '32',
+        'weight' => '33',
       ),
     ),
   );
@@ -5503,6 +5503,86 @@ v|Medical/Dental collaboration',
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_state_plan_priorities'.
+  $fields['node-coalition_profile-field_state_plan_priorities'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_state_plan_priorities',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 109,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_state_plan_priorities',
+      'label' => 'Which of your priorities are directly related to objectives in your state oral health plan?',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'select_or_other',
+        'settings' => array(
+          'available_options' => '',
+          'available_options_php' => '$pf_instance = field_read_instance(\'node\', \'field_priorities\', \'coalition_profile\');
+$pf_options = $pf_instance["widget"]["settings"]["available_options"];
+
+preg_match_all(\'/([^|]+)\\|([^\\r]+)[\\r\\n\\s]+/\', $pf_options, $pf_pairs);
+$pf_pairs = array_combine($pf_pairs[1], $pf_pairs[2]);
+
+return $pf_pairs;',
+          'markup_available_options_php' => '&lt;none&gt;',
+          'other' => 'Other',
+          'other_unknown_defaults' => 'other',
+          'sort_options' => 0,
+        ),
+        'type' => 'select_or_other_buttons',
+        'weight' => '31',
+      ),
+    ),
+  );
+
   // Exported field: 'node-coalition_profile-field_strategic_plan_length'.
   $fields['node-coalition_profile-field_strategic_plan_length'] = array(
     'field_config' => array(
@@ -5764,7 +5844,7 @@ v|Medical/Dental collaboration',
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '35',
+        'weight' => '36',
       ),
     ),
   );
@@ -6300,6 +6380,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Volunteer Staff');
   t('Webinars');
   t('What national, regional, or state Conferences/Meetings does your coalition staff regularly attend?');
+  t('Which of your priorities are directly related to objectives in your state oral health plan?');
   t('Year coaltion was established');
   t('grassroots lobbying -- e.g. organizing the public to communicate with policymakers about an issue.
 direct lobbying -- e.g. direct contact with government officials/staff to influence legislation.');
