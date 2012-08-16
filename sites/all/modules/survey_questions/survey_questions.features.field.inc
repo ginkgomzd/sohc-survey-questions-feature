@@ -3352,6 +3352,86 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
     ),
   );
 
+  // Exported field: 'node-coalition_profile-field_hp_2020_priorities'.
+  $fields['node-coalition_profile-field_hp_2020_priorities'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_hp_2020_priorities',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'coalition_profile',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 108,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_hp_2020_priorities',
+      'label' => 'If so, please indicate:',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'select_or_other',
+        'settings' => array(
+          'available_options' => '',
+          'available_options_php' => '$pf_instance = field_read_instance(\'node\', \'field_priorities\', \'coalition_profile\');
+$pf_options = $pf_instance["widget"]["settings"]["available_options"];
+
+preg_match_all(\'/([^|]+)\\|([^\\r]+)[\\r\\n\\s]+/\', $pf_options, $pf_pairs);
+$pf_pairs = array_combine($pf_pairs[1], $pf_pairs[2]);
+
+return $pf_pairs;',
+          'markup_available_options_php' => '&lt;none&gt;',
+          'other' => 'Other',
+          'other_unknown_defaults' => 'other',
+          'sort_options' => 0,
+        ),
+        'type' => 'select_or_other_buttons',
+        'weight' => '33',
+      ),
+    ),
+  );
+
   // Exported field: 'node-coalition_profile-field_identifying_priorities'.
   $fields['node-coalition_profile-field_identifying_priorities'] = array(
     'field_config' => array(
@@ -3410,7 +3490,7 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '33',
+        'weight' => '34',
       ),
     ),
   );
@@ -5684,7 +5764,7 @@ v|Medical/Dental collaboration',
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '34',
+        'weight' => '35',
       ),
     ),
   );
@@ -6175,6 +6255,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('If so, are they formally affiliated with the coaltion?');
   t('If so, are they:');
   t('If so, please identify them:');
+  t('If so, please indicate:');
   t('If so, please upload');
   t('If so, provide examples of events:');
   t('If so, upload plan documents:');

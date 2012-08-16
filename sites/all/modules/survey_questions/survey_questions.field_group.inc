@@ -490,6 +490,7 @@ function survey_questions_field_group_info() {
       7 => 'field_action_plan_document',
       8 => 'field_legislative_advocacy',
       9 => 'field_state_plan_documents',
+      10 => 'field_hp_2020_priorities',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

@@ -71,6 +71,7 @@ features[field][] = node-coalition_profile-field_goals
 features[field][] = node-coalition_profile-field_government_entities
 features[field][] = node-coalition_profile-field_grassroot_lobby_level
 features[field][] = node-coalition_profile-field_has_membership
+features[field][] = node-coalition_profile-field_hp_2020_priorities
 features[field][] = node-coalition_profile-field_identifying_priorities
 features[field][] = node-coalition_profile-field_incorporation_status
 features[field][] = node-coalition_profile-field_individual_members
