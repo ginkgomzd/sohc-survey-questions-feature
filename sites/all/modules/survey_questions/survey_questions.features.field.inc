@@ -5107,14 +5107,14 @@ v|Medical/Dental collaboration',
     ),
   );
 
-  // Exported field: 'node-coalition_profile-field_priorities_hp_2020'.
-  $fields['node-coalition_profile-field_priorities_hp_2020'] = array(
+  // Exported field: 'node-coalition_profile-field_do_hp2020_prior_relate'.
+  $fields['node-coalition_profile-field_do_hp2020_prior_relate'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_priorities_hp_2020',
+      'field_name' => 'field_do_hp2020_prior_relate',
       'foreign keys' => array(),
       'indexes' => array(
         'value' => array(
@@ -5154,7 +5154,7 @@ v|Medical/Dental collaboration',
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_priorities_hp_2020',
+      'field_name' => 'field_do_hp2020_prior_relate',
       'label' => 'Are any of your current priorities directly related to Healthy People 2020 goals?',
       'required' => 0,
       'settings' => array(
