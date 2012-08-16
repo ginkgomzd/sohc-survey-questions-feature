@@ -495,7 +495,81 @@ f|Training/Education revenue',
           'sort_options' => 0,
         ),
         'type' => 'select_or_other',
-        'weight' => 0,
+        'weight' => '0',
+      ),
+    ),
+  );
+
+  // Exported field: 'field_collection_item-field_funding_other_sources-field_priorities_funded'.
+  $fields['field_collection_item-field_funding_other_sources-field_priorities_funded'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '-1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_priorities_funded',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'field_funding_other_sources',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 4,
+        ),
+      ),
+      'entity_type' => 'field_collection_item',
+      'field_name' => 'field_priorities_funded',
+      'label' => 'Priorities Funded',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'select_or_other',
+        'settings' => array(
+          'available_options' => '',
+          'available_options_php' => '$pf_instance = field_read_instance(\'node\', \'field_priorities\', \'coalition_profile\');
+$pf_options = $pf_instance["widget"]["settings"]["available_options"];
+
+preg_match_all(\'/([^|]+)\\|([^\\r]+)[\\r\\n\\s]+/\', $pf_options, $pf_pairs);
+$pf_pairs = array_combine($pf_pairs[1], $pf_pairs[2]);
+
+return $pf_pairs;',
+          'markup_available_options_php' => '&lt;none&gt;',
+          'other' => 'Other',
+          'other_unknown_defaults' => 'other',
+          'sort_options' => 0,
+        ),
+        'type' => 'select_or_other_buttons',
+        'weight' => '3',
       ),
     ),
   );
@@ -6132,6 +6206,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Please upload any Charter/By-Laws documents.');
   t('Please upload any staff position description documents.');
   t('Press Releases');
+  t('Priorities Funded');
   t('Regional Coalition');
   t('Regional Coalition Name');
   t('Regular Meetings?');
