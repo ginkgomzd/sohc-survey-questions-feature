@@ -1,0 +1,15 @@
+#!/usr/bin/drush
+<?php
+
+/*** FINAL: ***/
+$pf_instance = field_read_instance('node', 'field_priorities', 'coalition_profile');
+$pf_options = $pf_instance["widget"]["settings"]["available_options"];
+
+preg_match_all('/([^|]+)\|([^\r]+)[\r\n\s]+/', $pf_options, $pf_pairs);
+$pf_pairs = array_combine($pf_pairs[1], $pf_pairs[2]);
+
+foreach($pf_pairs as $key => $val) {
+   echo "[ $key => $val ]\n";
+}
+return $pf_pairs;
+

@@ -3,6 +3,7 @@ description = Survey Questions
 core = 7.x
 package = SOHC
 php = 5.2.4
+scripts[] = survey_questions.js
 dependencies[] = addressfield
 dependencies[] = ctools
 dependencies[] = email
