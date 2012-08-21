@@ -13,5 +13,5 @@ function survey_questions_node_prepare($node) {
   $type = node_type_get_type($node);
 
   if ($type->type == 'coalition_profile')
-    drupal_add_js('jQuery(document).ready(function () { gsl_ survey_questions_on_form_load(); });', 'inline');
+    drupal_add_js('jQuery(document).ready(function () { gsl_survey_questions_on_form_load(); });', 'inline');
 }

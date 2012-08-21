@@ -1,79 +1,66 @@
 
-/// global Priorities checkboxes
-  var arrJQPrioritiesChx = [];
-/// global Priorities-Funded checkboxes
-  var arrJQFundedChx = [];
-  var arrJQFundedOther = [];
-
 /// CONFIG:
-
+//Selectors:
+/*TODO: verify selector, value!=select_or_other */
+//INDPENDENT_ELEMENTS='#edit-field-priorities-und-select[type="checkbox"][value!="select_or_other"';
+INDPENDENT_ELEMENTS='[name^="field_priorities[und]"]';
+//DEPENDENT_ELEMENTS='[id*=[field_priorities_funded]';
+DEPENDENT_ELEMENTS='[name^="field_funding_other_sources[und]["][name*="][field_priorities_funded][und]"]'; /* TODO: make array */
+TABS='.field-group-tabs-wrapper.field-group-tabs li.vertical-tab-button a';
+AJAX_EVENT_BUBBLE_LISTENER='#edit-field-funding-other-sources'; /* TODO: make array ? */
 
 function  gsl_survey_questions_on_form_load() {
 
-/*** set onClick for tabs ***/
-  tabs = jQuery('.field-group-tabs-wrapper.field-group-tabs li.vertical-tab-button a');
-  tabs.each(function(key, tab) {
-    jQuery(tab).click(psl_tab_onclick);
-  });
-
-/*** get priorities checkboxes ***/
-  jQuery('#edit-field-priorities-und-select [type="checkbox"]').each(
-    function (idx, chkbox) {
-      jQchkbox = jQuery(chkbox);
-
-      if (jQchkbox.attr('value') == 'select_or_other' ) return;
-
-      arrJQPrioritiesChx[idx] = jQchkbox;
-      arrJQPrioritiesChx[idx].label = jQchkbox.parent().children('label').text();
-//      alert(arrJQPrioritiesChx[idx].label+' label added');
-    }
-  );
-
-/*** get initial Priorities-Funded Checkboxes ***/
-  jQuery('[type="text"][id*=field-priorities-funded-und-other]').each(
-    function (idx, txtbox) {
-      arrJQFundedOther
+  /*** set onClick for tabs ***/
+  tabs = jQuery(TABS);
+  tabs.each(
+    function(key, tab) {
+      jQuery(tab).click(prepare_from_user_input);
     }
   );
 
   //listen for "add more" button clicks
-  jQuery('#edit-field-funding-other-sources').ajaxComplete(add_more_handler);
+  jQuery(AJAX_EVENT_BUBBLE_LISTENER).ajaxComplete(add_more_handler);
 }
 
-function psl_tab_onclick() {
-  /*** combine textbox values and checkbox values ***/
-  values = [];
-  /*** get Priorities Checkboxes **/
-  arrJQPrioritiesChx.forEach(
-    function (chk, idx) {
-      var option = {};
-
-      if (!chk.attr('checked')) return;
-      option['value'] = chk.attr('value');
-      option['label'] = chk.label;
-      values.push(option);
+function removeUnSelectedOptions(checkboxes, selected) {
+  checkboxes.each(
+    function (idx, chk) {
+      var found = false;
+      selected.each(function(idx, item) {
+        if (chk.value == item.value) {
+          found = true;
+        }
+      });
+      /*if (!found) {
+        jQuery(chk).attr('checked',false)
+          .parent().hide();
+      } else {
+        jQuery(chk).parent().show();
+      }*/
     }
   );
+}
 
-/*** get Priorities-other text boxes  ***/
-  txtPriorities = jQuery('.form-item-field-priorities-und-other [type="text"]');
+function prepare_from_user_input() {
+  removeUnSelectedOptions(jQuery(DEPENDENT_ELEMENTS+'[type="checkbox"]'), jQuery(INDPENDENT_ELEMENTS+'[type="checkbox"]:checked'));
+  strOther = get_other_txbx().attr('value');
+  jQuery(DEPENDENT_ELEMENTS+'[type="text"]').each(
+    function (idx, txt) {
+      txt.value = strOther;
+      jQuery(txt).attr('disabled','disabled');
+    }
+  );
+}
 
-    txtPriorities.each(function(idx, obj) {
-    var option = {};
-    txt = jQuery(obj);
-
-    if (txt.attr('value') == '') return;
-
-    option['value'] = 'edit-field-priorities-und-select-select-or-other';
-    option['label'] = txt.attr('value');
-
-    values.push(option);
-  } );
-
+function get_other_txbx() {
+/*** get Priorities other-textboxes  ***/
+  return jQuery(INDPENDENT_ELEMENTS+'[type="text"]');
+/* TODO: cache result of jQuery seleciton */
 }
 
 function add_more_handler(e,x,settings) {
-  if (settings.url != '/system/ajax') {return 0;} ;
+  if (settings.url != '/system/ajax') return; ;
 
-  //edit-field-funding-other-sources-und-0-field-priorities-funded-und-other
+  prepare_from_user_input();
 }
