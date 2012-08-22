@@ -5,7 +5,10 @@
 //INDPENDENT_ELEMENTS='#edit-field-priorities-und-select[type="checkbox"][value!="select_or_other"';
 INDPENDENT_ELEMENTS='[name^="field_priorities[und]"]';
 //DEPENDENT_ELEMENTS='[id*=[field_priorities_funded]';
-DEPENDENT_ELEMENTS='[name^="field_funding_other_sources[und]["][name*="][field_priorities_funded][und]"]'; /* TODO: make array */
+ARR_DEPENDENT_ELEMENTS=['[name^="field_funding_other_sources[und]["][name*="][field_priorities_funded][und]"]'
+  , '[name^="field_state_plan_priorities[und]"]'
+  , '[name^="field_hp_2020_priorities[und]"]'
+  ];
 TABS='.field-group-tabs-wrapper.field-group-tabs li.vertical-tab-button a';
 AJAX_EVENT_BUBBLE_LISTENER='#edit-field-funding-other-sources'; /* TODO: make array ? */
 
@@ -19,7 +22,7 @@ function  gsl_survey_questions_on_form_load() {
     }
   );
 
-  //listen for "add more" button clicks
+  /*** listen for "add more" button clicks ***/
   jQuery(AJAX_EVENT_BUBBLE_LISTENER).ajaxComplete(add_more_handler);
 }
 
@@ -32,20 +35,27 @@ function removeUnSelectedOptions(checkboxes, selected) {
           found = true;
         }
       });
-      /*if (!found) {
+      if (!found) {
         jQuery(chk).attr('checked',false)
           .parent().hide();
       } else {
         jQuery(chk).parent().show();
-      }*/
+      }
     }
   );
 }
 
 function prepare_from_user_input() {
-  removeUnSelectedOptions(jQuery(DEPENDENT_ELEMENTS+'[type="checkbox"]'), jQuery(INDPENDENT_ELEMENTS+'[type="checkbox"]:checked'));
+  ARR_DEPENDENT_ELEMENTS.forEach(
+    function(item) {
+      alter_form(item);
+    }
+  );
+}
+function alter_form(selector) {
+  removeUnSelectedOptions(jQuery(selector+'[type="checkbox"]'), jQuery(INDPENDENT_ELEMENTS+'[type="checkbox"]:checked'));
   strOther = get_other_txbx().attr('value');
-  jQuery(DEPENDENT_ELEMENTS+'[type="text"]').each(
+  jQuery(selector+'[type="text"]').each(
     function (idx, txt) {
       txt.value = strOther;
       jQuery(txt).attr('disabled','disabled');
