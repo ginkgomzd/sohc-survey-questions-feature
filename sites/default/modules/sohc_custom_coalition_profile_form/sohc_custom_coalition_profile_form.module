@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implementation of hook_init.
+ */
+function sohc_custom_coalition_profile_form_init () {
+  $options = array (
+    'type'    => 'file',
+    'group'   => CSS_DEFAULT
+  );
+  $module_path = drupal_get_path('module', 'sohc_custom_coalition_profile_form');
+
+  drupal_add_css($module_path . '/css/sohc_custom_coalition_profile_form.css', $options);
+  drupal_add_js($module_path . '/js/sohc_custom_coalition_profile_form.js');
+}

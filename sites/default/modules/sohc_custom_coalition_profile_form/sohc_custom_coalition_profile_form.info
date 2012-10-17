@@ -1,0 +1,4 @@
+name = SOHC Custom Coalition Profile Form
+description = Customizations to Coalition Profile content type's create/edit form
+core = 7.x
+package = SOHC Custom Modules

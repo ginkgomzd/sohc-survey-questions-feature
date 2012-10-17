@@ -1,0 +1,26 @@
+/*
+ * Make Fieldgroup play nice with other fieldsets (namely, those provided by
+ * the Addressfield module).
+ */
+
+div.vertical-tabs .vertical-tabs-panes .field-type-addressfield legend
+{
+  display: block;
+}
+
+div.vertical-tabs .vertical-tabs-panes .field-type-addressfield fieldset
+{
+  border: 1px solid #CCC;
+  margin: 1em 0;
+  padding: 2.5em 0 0 0;
+}
+
+
+/*
+ * The country will always be United States, so we'll hide the field from view.
+ */
+
+.form-item-field-address-und-0-country
+{
+  display: none;
+}
