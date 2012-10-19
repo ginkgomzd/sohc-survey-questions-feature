@@ -1,0 +1,47 @@
+array(22) {
+  ["a"]=>
+  string(45) "Perinatal (e.g., coverage, access, financing)"
+  ["b"]=>
+  string(44) "Children (e.g., coverage, access, financing)"
+  ["c"]=>
+  string(42) "Adults (e.g., coverage, access, financing)"
+  ["d"]=>
+  string(52) "Aging population (e.g., coverage, access, financing)"
+  ["e"]=>
+  string(16) "Public Education"
+  ["f"]=>
+  string(12) "Surveillance"
+  ["g"]=>
+  string(22) "Early childhood caries"
+  ["h"]=>
+  string(19) "Periodontal disease"
+  ["i"]=>
+  string(11) "Oral cancer"
+  ["j"]=>
+  string(17) "Infection Control"
+  ["k"]=>
+  string(6) "Injury"
+  ["l"]=>
+  string(19) "Prevention programs"
+  ["m"]=>
+  string(18) "Water flouridation"
+  ["n"]=>
+  string(15) "Dental sealants"
+  ["o"]=>
+  string(16) "Flouride varnish"
+  ["p"]=>
+  string(24) "School-based dental care"
+  ["q"]=>
+  string(28) "Tabacco prevention/cessation"
+  ["r"]=>
+  string(23) "Expansion of safety-net"
+  ["s"]=>
+  string(20) "New workforce models"
+  ["t"]=>
+  string(17) "Scope of practice"
+  ["u"]=>
+  string(35) "Implementation of healthcare reform"
+  ["v"]=>
+  string(14) "Medical/Dental"
+}
+[ a => Perinatal (e.g., coverage, access, financing) ][ b => Children (e.g., coverage, access, financing) ][ c => Adults (e.g., coverage, access, financing) ][ d => Aging population (e.g., coverage, access, financing) ][ e => Public Education ][ f => Surveillance ][ g => Early childhood caries ][ h => Periodontal disease ][ i => Oral cancer ][ j => Infection Control ][ k => Injury ][ l => Prevention programs ][ m => Water flouridation ][ n => Dental sealants ][ o => Flouride varnish ][ p => School-based dental care ][ q => Tabacco prevention/cessation ][ r => Expansion of safety-net ][ s => New workforce models ][ t => Scope of practice ][ u => Implementation of healthcare reform ][ v => Medical/Dental ]

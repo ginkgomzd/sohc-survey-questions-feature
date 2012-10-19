@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-4.6.dtd">
+<!-- eric4 project file for project sohc-survey-questions -->
+<!-- Saved: 2012-08-21, 09:42:12 -->
+<!-- Copyright (C) 2012 ,  -->
+<Project version="4.6">
+  <Language>en</Language>
+  <ProgLanguage mixed="1">Python</ProgLanguage>
+  <ProjectType>Other</ProjectType>
+  <Description></Description>
+  <Version></Version>
+  <Author></Author>
+  <Email></Email>
+  <Sources>
+    <Source>survey_questions.features.field.inc</Source>
+    <Source>survey_questions.field_group.inc</Source>
+    <Source>survey_questions.features.inc</Source>
+  </Sources>
+  <Forms>
+  </Forms>
+  <Translations>
+  </Translations>
+  <Resources>
+  </Resources>
+  <Interfaces>
+  </Interfaces>
+  <Others>
+  </Others>
+  <Vcs>
+    <VcsType>None</VcsType>
+  </Vcs>
+  <FiletypeAssociations>
+    <FiletypeAssociation pattern="*.inc" type="SOURCES" />
+    <FiletypeAssociation pattern="*.php" type="SOURCES" />
+  </FiletypeAssociations>
+</Project>

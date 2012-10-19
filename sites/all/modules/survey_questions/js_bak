@@ -1,0 +1,131 @@
+
+/// global priorities checkboxes
+  var chkPriorities = [];
+/// global Priorities-Other text boxes
+  var txtPriorities;
+
+  var priorities_select;
+
+/// CONFIG:
+/// array of inputs to replace
+///TEMP:
+  var HT_ID = 'dev-dom-id';
+
+function  psl_on_form_load() {
+
+/*** set onClick for tabs ***/
+  tabs = jQuery('.field-group-tabs-wrapper.field-group-tabs li.vertical-tab-button a');
+  tabs.each(function(key, tab) {
+    jQuery(tab).click(psl_tab_onclick);
+  });
+
+/*** get priorities checkboxes ***/
+  jQuery('#edit-field-priorities-und-select [type="checkbox"]').each(
+    function (idx, chkbox) {
+      jQchkbox = jQuery(chkbox);
+
+      if (jQchkbox.attr('value') == 'select_or_other' ) return;
+
+      chkPriorities[idx] = jQchkbox;
+      chkPriorities[idx].label = jQchkbox.parent().children('label').text();
+//      alert(chkPriorities[idx].label+' label added');
+    }
+  );
+
+    //DEV ONLY:
+    //psl_tab_onclick();
+
+
+}
+
+function psl_tab_onclick() {
+alert("psl_tab_onclick");
+  values = [];
+
+  /*** combine textbox values and checkbox values ***/
+  chkPriorities.forEach(
+    function (chk, idx) {
+      var option = {};
+
+      if (!chk.attr('checked')) return;
+      option['value'] = chk.attr('value');
+      option['label'] = chk.label;
+      values.push(option);
+      //alert('pushed '+option['value']+'::'+option['label']);
+    }
+  );
+
+/*** get Priorities-other text boxes  ***/
+  txtPriorities = jQuery('.form-item-field-priorities-und-other [type="text"]');
+
+    txtPriorities.each(function(idx, obj) {
+    var option = {};
+    txt = jQuery(obj);
+
+    if (txt.attr('value') == '') return;
+
+    option['value'] = 'edit-field-priorities-und-select-select-or-other';
+    option['label'] = txt.attr('value');
+
+    values.push(option);
+  } );
+
+  selectify_text_boxes();
+
+  //listen for "add more" button clicks
+  jQuery('#edit-field-funding-other-sources').ajaxComplete(
+    function(e, x, settings) {
+      if (settings.url != '/system/ajax') {return 0;} ;
+      build_select_list(values, HT_ID, '').insertBefore(
+        jQuery('#edit-field-funding-other-sources').find('input[id*="field-priorities-funded"]').each(function() { alert('here'); } )
+      );
+    }
+  );
+  //jQuery('.edit-field-funding-other-sources-und-add-more-submit').bind('ajaxComplete', function() { alert('AjaxComplete'); }  );
+//jQuery('#edit-field-funding-other-sources').find('[id~="field-priorities-funded"]').each(function() { alert('here'); } )
+  //jQuery('[id^="edit-field-funding-other-sources-und-add-more"]').click(psl_tab_onclick);
+}
+
+
+function selectify_text_boxes() {
+  //alert('selectify_text_boxes');
+  //add_div_to_end('<div class="mzd">some content, yo</div>', '#field-funding-other-sources-und-0-field-funding-percent-budget-add-more-wrapper');
+  //build_select_list(values, HT_ID, 'Priorities Funded:').insertBefore('#edit-field-funding-other-sources-und-0-remove-button');
+  build_select_list(values, HT_ID, 'Priorities Funded:').insertBefore('[id^="edit-field-funding-other-sources-und-"][id*="remove-button"]');
+  //add_div_to_end(build_select_list(values), '#field-funding-other-sources-und-0-field-funding-percent-budget-add-more-wrapper');
+}
+
+/***
+ * build_select_list(select_options = [ {value : a, label: 'option a'} ] )
+ * returns jQuery('<select>')
+ * htId - The ID to give the new object
+ */
+function build_select_list(select_options, htId, label) {
+  var priorities_select = jQuery('<select multiple="multiple">');
+
+
+  priorities_select.attr('class', 'select-or-other-select form-select').attr('name', 'field_funding_other_sources[und][0][field_priorities_funded][und][0][value]');
+
+  select_options.forEach(
+    function (objOption, idx) {
+      //alert(objOption.value+'(val)::(lbl)'+objOption.label);
+      var htOption = jQuery('<option>').attr('value', objOption.value).text(objOption.label);
+      priorities_select.append(htOption);
+    }
+  );
+
+  var div = jQuery('<div>').attr('class', 'form-item');
+  div.append(
+    jQuery('<label>').attr('for', htId).text(label)
+  );
+
+  return div.append(priorities_select);
+}
+
+function add_div_to_end(div, jqSelector) {
+  jQuery(jqSelector).find('div').append(div);
+}
+
+function script_is_included() {
+  alert('claramente, el gui贸n se incluye');
+}

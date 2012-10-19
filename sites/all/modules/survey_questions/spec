@@ -1,0 +1,12 @@
+
+
+create select list with any "other" options included
+on submit... 
+check select list for "other" options having been selected
+if selected, create "or other" text field(s) and populate with other options
+remove other options from select list.
+... submit
+
+
+
+
