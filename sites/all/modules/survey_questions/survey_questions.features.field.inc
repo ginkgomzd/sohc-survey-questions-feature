@@ -5172,7 +5172,10 @@ r|Expansion of safety-net
 s|New workforce models
 t|Scope of practice
 u|Implementation of healthcare reform
-v|Medical/Dental collaboration',
+v|Medical/Dental collaboration
+w|Medicaid
+x|State Oral Health/Public Health Programs
+',
           'available_options_php' => '',
           'markup_available_options_php' => '&lt;none&gt;',
           'other' => 'Other (Please specify)',
