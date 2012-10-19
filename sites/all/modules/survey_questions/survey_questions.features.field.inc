@@ -3220,7 +3220,7 @@ within the limits of the Internal Revenue Code of 1976.',
   $fields['node-coalition_profile-field_government_entities'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_government_entities',
@@ -3267,7 +3267,7 @@ within the limits of the Internal Revenue Code of 1976.',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_government_entities',
-      'label' => 'Does your coalition work regularly with state government entities?',
+      'label' => 'With which state government entities does your coalition work regularly?',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -6340,7 +6340,6 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Does your coalition regularly partner with other organizations to host events?');
   t('Does your coalition use a fiscal agent?');
   t('Does your coalition utilize any other tools or strategies such as a policy scan to identify goals and priorities?');
-  t('Does your coalition work regularly with state government entities?');
   t('Does your state have a state oral health plan?');
   t('Dues Structure');
   t('Electronic Newsletter or Update');
@@ -6402,6 +6401,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Webinars');
   t('What national, regional, or state Conferences/Meetings does your coalition staff regularly attend?');
   t('Which of your priorities are directly related to objectives in your state oral health plan?');
+  t('With which state government entities does your coalition work regularly?');
   t('Year coaltion was established');
   t('grassroots lobbying -- e.g. organizing the public to communicate with policymakers about an issue.
 direct lobbying -- e.g. direct contact with government officials/staff to influence legislation.');
