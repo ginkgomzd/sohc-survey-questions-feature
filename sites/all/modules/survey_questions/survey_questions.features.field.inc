@@ -4732,7 +4732,7 @@ d|Secretary',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_oral_health_driver',
-      'label' => 'Is coalition a driver (i.e. developing and monitoring implementation) of state oral health plan?',
+      'label' => 'Is your coalition a driver (i.e. developing and monitoring implementation) of the state oral health plan?',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -6365,8 +6365,8 @@ within the limits of the Internal Revenue Code of 1976.');
   t('If your coalition is a 501(c)(3), has the coalition made a 501(h) election with the IRS?');
   t('In-Person Events?');
   t('Incorporation Status');
-  t('Is coalition a driver (i.e. developing and monitoring implementation) of state oral health plan?');
   t('Is your coalition a CDC Grantee?');
+  t('Is your coalition a driver (i.e. developing and monitoring implementation) of the state oral health plan?');
   t('Is your coalition interested in partnering with other coalitions to provide educational trainings/webinars?');
   t('Is your state a CDC-funded state?');
   t('Last Name');
