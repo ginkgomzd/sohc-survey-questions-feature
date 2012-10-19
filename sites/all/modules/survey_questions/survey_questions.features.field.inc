@@ -2417,7 +2417,7 @@ within the limits of the Internal Revenue Code of 1976.',
       'bundle' => 'coalition_profile',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => 'Specity Flat Fee Amount',
+      'description' => 'Specify Flat Fee Amount',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -6394,8 +6394,8 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Select Frequency:');
   t('Size of Annual Operating Budget: Specific Amount & Range:');
   t('Size of Membership');
+  t('Specify Flat Fee Amount');
   t('Specify Source');
-  t('Specity Flat Fee Amount');
   t('Twitter URL');
   t('Volunteer Staff');
   t('Webinars');
