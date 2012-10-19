@@ -1,0 +1,7 @@
+name = Login settings
+description = Allows users to login using an email address and to set password on account creation.
+core = 7.x
+package = SOHC Custom Modules
+php = 5.2.4
+dependencies[] = comment
+dependencies[] = logintoboggan

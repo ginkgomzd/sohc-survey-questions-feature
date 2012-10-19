@@ -1,0 +1,66 @@
+<?php
+/**
+ * @file
+ * Since Login Toboggan doesn't support Features, we manually set our
+ * configurations here.
+ */
+
+define('LOGIN_SETTINGS_UNVERIFIED_USERS_ROLE_NAME', 'unverified user');
+
+/**
+ * Implementation of hook_enable.
+ */
+function login_settings_enable () {
+  variable_set('logintoboggan_confirm_email_at_registration', 0);
+  variable_set('logintoboggan_immediate_login_on_register', 1);
+  variable_set('logintoboggan_login_successful_message', 0);
+  variable_set('logintoboggan_login_with_email', 1);
+  variable_set('logintoboggan_minimum_password_length', 0);
+  variable_set('logintoboggan_override_destination_parameter', 1);
+  variable_set('logintoboggan_redirect_on_confirm', '');
+  variable_set('logintoboggan_redirect_on_register', '');
+  variable_set('logintoboggan_unified_login', 0);
+  /*
+   * this one is a little tricky; this is equivalent to checking the "set
+   * password" checkbox, which allows users to choose their initial password
+   * when registering
+   */
+  variable_set('user_email_verification', 0);
+  /*
+   * ... and because users don't have to have their addresses verified to create
+   * an account, we assign them to a placeholder role until verified...
+   */
+  $role_id = login_settings_get_user_role_by_name(LOGIN_SETTINGS_UNVERIFIED_USERS_ROLE_NAME);
+  variable_set('logintoboggan_pre_auth_role', $role_id);
+  /*
+   * ... and delete unverified accounts that sit around for two weeks or longer
+   */
+  variable_set('logintoboggan_purge_unvalidated_user_interval', 1209600);
+
+  // grant permissions to our unverified role
+  $permissions = array(
+    'access comments',
+    'access content',
+  );
+  user_role_grant_permissions($role_id, $permissions);
+}
+
+/**
+ * Helper function that gets the ID for a role, given its name. If the role does
+ * not exist, it is created, and the resulting ID is returned.
+ *
+ * @param string $name The name of the role to be retrieved or created
+ * @return int Role ID
+ */
+function login_settings_get_user_role_by_name($name) {
+  $role = user_role_load_by_name($name); // check to see if the role exists
+  if (!$role) { // if not, create it
+    $newRole = new stdClass();
+    $newRole->name = $name;
+    $newRole->weight = 3;
+    user_role_save($newRole);
+    $role = user_role_load_by_name($name);
+  }
+
+  return (int) $role->rid;
+}
