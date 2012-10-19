@@ -4607,8 +4607,7 @@ c|Quarterly',
           'available_options' => 'a|President/Chairperson
 b|Vice President
 c|Treasurer
-d|Secretary
-e|Gofer',
+d|Secretary',
           'available_options_php' => '',
           'markup_available_options_php' => '&lt;none&gt;',
           'other' => 'Other',
