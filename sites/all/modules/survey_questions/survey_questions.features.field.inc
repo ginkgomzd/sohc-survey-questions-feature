@@ -3346,7 +3346,7 @@ direct lobbying -- e.g. direct contact with government officials/staff to influe
       ),
       'entity_type' => 'node',
       'field_name' => 'field_grassroot_lobby_level',
-      'label' => 'Do your coalition advocacy efforts include grassroots lobbying and/or direct lobbying? (check all that apply)',
+      'label' => 'At what level(s) does your coalition engage in grassroots lobbying?',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -6312,6 +6312,7 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Add as many orgs as you collaborate with.');
   t('Are any of your current priorities directly related to Healthy People 2020 goals?');
   t('At what level(s) does your coalition engage in direct lobbying?');
+  t('At what level(s) does your coalition engage in grassroots lobbying?');
   t('Can Individuals Join as Members?');
   t('Co-located and/or co-staffed with other organizations?');
   t('Coalition Address');
@@ -6324,7 +6325,6 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Director Name');
   t('Director TItle');
   t('Do Members Have Voting Rights?');
-  t('Do your coalition advocacy efforts include grassroots lobbying and/or direct lobbying? (check all that apply)');
   t('Does coalition have a formal evaluation plan?');
   t('Does your coalition collaborate with coalitions/organizations outside of oral health?');
   t('Does your coalition collaborate with national oral health organizations?');
