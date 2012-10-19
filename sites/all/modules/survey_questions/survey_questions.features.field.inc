@@ -1973,7 +1973,7 @@ within the limits of the Internal Revenue Code of 1976.',
       ),
       'entity_type' => 'node',
       'field_name' => 'field_direct_lobby_level',
-      'label' => 'Does your coalition engage in direct lobbying?',
+      'label' => 'At what level(s) does your coalition engage in direct lobbying?',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -6311,6 +6311,7 @@ return $pf_pairs;',
 within the limits of the Internal Revenue Code of 1976.');
   t('Add as many orgs as you collaborate with.');
   t('Are any of your current priorities directly related to Healthy People 2020 goals?');
+  t('At what level(s) does your coalition engage in direct lobbying?');
   t('Can Individuals Join as Members?');
   t('Co-located and/or co-staffed with other organizations?');
   t('Coalition Address');
@@ -6327,7 +6328,6 @@ within the limits of the Internal Revenue Code of 1976.');
   t('Does coalition have a formal evaluation plan?');
   t('Does your coalition collaborate with coalitions/organizations outside of oral health?');
   t('Does your coalition collaborate with national oral health organizations?');
-  t('Does your coalition engage in direct lobbying?');
   t('Does your coalition have a formal communications plan and/or modalities?');
   t('Does your coalition have a formal fundraising plan?');
   t('Does your coalition have a formal rules structure?');
